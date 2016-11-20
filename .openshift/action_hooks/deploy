@@ -1,0 +1,19 @@
+#!/bin/bash
+# This deploy hook gets executed after dependencies are resolved and the
+# build hook has been run but before the application has been started back
+# up again.  This script gets executed directly, so it could be python, php,
+# ruby, etc.
+
+source ${OPENSHIFT_HOMEDIR}python/virtualenv/venv/bin/activate;
+which python;
+export PYTHON_EGG_CACHE=${OPENSHIFT_HOME_DIR}python/virtualenv/venv/lib/python3.3/site-packages
+
+echo "Executing 'python ${OPENSHIFT_REPO_DIR}api/manage.py collectstatic --noinput -v0'"
+python "$OPENSHIFT_REPO_DIR"api/manage.py collectstatic --noinput -v0
+python "$OPENSHIFT_REPO_DIR"api/manage.py makemigrations members --noinput -v0
+python "$OPENSHIFT_REPO_DIR"api/manage.py migrate --noinput -v0
+#python "$OPENSHIFT_REPO_DIR"api/manage.py makemigrations forum --noinput -v0
+#python "$OPENSHIFT_REPO_DIR"api/manage.py makemigrations rjsite --noinput -v0
+#python "$OPENSHIFT_REPO_DIR"api/manage.py migrate members --noinput -v0
+#python "$OPENSHIFT_REPO_DIR"api/manage.py migrate forum --noinput -v0
+#python "$OPENSHIFT_REPO_DIR"api/manage.py migrate rjsite --noinput -v0
