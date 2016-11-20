@@ -6,6 +6,7 @@
 
 source ${OPENSHIFT_HOMEDIR}python/virtualenv/venv/bin/activate;
 which python;
+python "$OPENSHIFT_REPO_DIR"setup.py install
 export PYTHON_EGG_CACHE=${OPENSHIFT_HOME_DIR}python/virtualenv/venv/lib/python3.5/site-packages
 
 echo "Executing 'python ${OPENSHIFT_REPO_DIR}api/manage.py collectstatic --noinput -v0'"
