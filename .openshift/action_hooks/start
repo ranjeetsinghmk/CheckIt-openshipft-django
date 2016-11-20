@@ -5,4 +5,6 @@
 #nohup $OPENSHIFT_REPO_DIR/diy/testrubyserver.rb $OPENSHIFT_DIY_IP $OPENSHIFT_REPO_DIR/diy |& /usr/bin/logshifter -tag diy &
 
 source ${OPENSHIFT_HOMEDIR}python/virtualenv/venv/bin/activate;
+which python;
+python3.5 "$OPENSHIFT_REPO_DIR"setup.py install
 python $OPENSHIFT_REPO_DIR/api/manage.py runserver $OPENSHIFT_DIY_IP:8080
