@@ -51,8 +51,9 @@ class SkillCategory(models.Model):
 class Skill(models.Model):
     skill = models.CharField(max_length=50, unique=True)
     skill_category = models.ForeignKey(SkillCategory)
-    profiles = models.ManyToManyField(Profile)
-    ranking = models.IntegerField()
+    profiles = models.ManyToManyField(Profile, blank=True)
+    ranking = models.IntegerField(default=0)
+    REQUIRED_FIELDS = ['skill', 'skill_category']
 
     def __str__(self):
         return str(self.skill)
@@ -69,7 +70,7 @@ class Project(models.Model):
     location = models.CharField(max_length=100)
     about = models.TextField()
     certificate = models.FileField(
-        upload_to='profile/projects/certificates/%Y/%m/%d')
+        upload_to='profile/projects/certificates/%Y/%m/%d', default=None, blank=True)
 
     def __str__(self):
         return str(self.title)
