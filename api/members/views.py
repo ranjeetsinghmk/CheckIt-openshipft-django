@@ -4,8 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import generics
 from rest_framework import viewsets
-from rest_framework import permissions
-from members.permissions import IsAdminOrReadOnly
+from auth.permissions import IsAdminOrReadOnly, IsAuthenticated
 from members.models import Country, Project, Profile, Skill, SkillCategory
 from members.serializers import SkillCategorySerializer, CountrySerializer, ProfileSerializer, SkillSerializer, ProjectSerializer
 
@@ -35,7 +34,7 @@ from members.serializers import SkillCategorySerializer, CountrySerializer, Prof
 #         if serializer.is_valid():
 #             serializer.save()
 #             return Response(serializer.data, status=status.HTTP_201_CREATED)
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 # class CountryDetail(APIView):
@@ -58,7 +57,7 @@ from members.serializers import SkillCategorySerializer, CountrySerializer, Prof
 #         if serializer.is_valid():
 #             serializer.save()
 #             return Response(serializer.data)
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 #     def delete(self, request, pk, format=None):
 #         country = self.get_object(pk)
@@ -68,17 +67,19 @@ from members.serializers import SkillCategorySerializer, CountrySerializer, Prof
 class SkillCategoryViewSet(viewsets.ModelViewSet):
     queryset = SkillCategory.objects.all()
     serializer_class = SkillCategorySerializer
-    permission_class = (IsAdminOrReadOnly,)
+    permission_classes = (IsAdminOrReadOnly,)
+
 
 class CountryViewSet(viewsets.ModelViewSet):
     queryset = Country.objects.all()
     serializer_class = CountrySerializer
-    permission_class = (IsAdminOrReadOnly,)
+    permission_classes = (IsAdminOrReadOnly,)
+
 
 class ProfileViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
-    permission_classes = (IsAdminOrReadOnly, permissions.IsAuthenticated,)
+    permission_classes = (IsAdminOrReadOnly, IsAuthenticated,)
 
     def retrieve(self, request, *args, **kwargs):
         try:
@@ -88,6 +89,7 @@ class ProfileViewSet(viewsets.ModelViewSet):
         except:
             pass
         return super(ProfileViewSet, self).retrieve(request, *args, **kwargs)
+
 
 
 class SkillViewSet(viewsets.ModelViewSet):
@@ -109,4 +111,4 @@ class SkillViewSet(viewsets.ModelViewSet):
 class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
-    permission_classes = (IsAdminOrReadOnly, permissions.IsAuthenticated)
+    permission_classes = (IsAdminOrReadOnly, IsAuthenticated)

@@ -25,7 +25,7 @@ SECRET_KEY = '5c$@^*mf=bj-qik6)m2ea-#ser@)016y#syl67k%1i$z+6&r_g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'api-dtr.rhcloud.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'api-dtr.rhcloud.com']
 
 # Application definition
 
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'members.apps.MembersConfig'
 ]
 
@@ -73,7 +74,7 @@ WSGI_APPLICATION = 'api.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-DATABASE_NAME = 'chechit'
+DATABASE_NAME = 'checkit'
 try:
     import pymysql
     pymysql.install_as_MySQLdb()
@@ -157,8 +158,15 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
-    'PAGE_SIZE': 10
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAdminUser',
+    ),
+    'PAGE_SIZE': 10,
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    )
 }
 
 ADMIN_LOGIN = 'ranjeet@checkit.com'
