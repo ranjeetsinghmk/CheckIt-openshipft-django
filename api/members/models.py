@@ -49,7 +49,7 @@ class SkillCategory(models.Model):
 
 
 class Skill(models.Model):
-    skill = models.CharField(max_length=50, unique=True)
+    skill = models.CharField(max_length=50)
     skill_category = models.ForeignKey(SkillCategory)
     profiles = models.ManyToManyField(Profile, blank=True)
     ranking = models.IntegerField(default=0)
@@ -60,6 +60,7 @@ class Skill(models.Model):
 
     class Meta:
         ordering = ('ranking',)
+        unique_together = ('skill', 'skill_category',)
 
 
 class Project(models.Model):
