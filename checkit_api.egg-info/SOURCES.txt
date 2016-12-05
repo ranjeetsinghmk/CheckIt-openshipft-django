@@ -1,0 +1,6 @@
+setup.py
+checkit_api.egg-info/PKG-INFO
+checkit_api.egg-info/SOURCES.txt
+checkit_api.egg-info/dependency_links.txt
+checkit_api.egg-info/requires.txt
+checkit_api.egg-info/top_level.txt
