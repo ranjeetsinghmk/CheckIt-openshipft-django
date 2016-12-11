@@ -1,12 +1,16 @@
-<md-toolbar [color]="myColor">
-  <span>{{title}}</span>
+<md-toolbar [color]="toolbar_color">
+  <img src="{{icon}}" [routerLink]="['/']" style="cursor:pointer;" height="40" width="60"/>
+  <span class="take-rest-space"></span>
+  <button md-button color="primary" [routerLink]="['/register']">JOIN</button>
+  <button md-raised-button color="accent">GETIN</button>
 </md-toolbar>
-
-<button md-button>FLAT</button>
-<button md-raised-button>RAISED</button>
-<button md-fab>
+<!--<button md-fab>
     <md-icon class="md-24">add</md-icon>
 </button>
 <button md-mini-fab>
     <md-icon class="md-24">add</md-icon>
-</button>
+</button>-->
+<router-outlet></router-outlet>
+<footer>
+
+</footer>

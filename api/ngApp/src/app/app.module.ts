@@ -5,18 +5,26 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { RegisterComponent } from './accounts/register.component';
+import { HomeComponent } from './home/home.component';
+import { routing }        from './app.routing';
+import { UserService, AlertService } from './_services/index';
+import { StringUtil } from './_utils/index';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    routing
   ],
-  providers: [],
+  providers: [UserService, AlertService, StringUtil],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
