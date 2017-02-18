@@ -56,7 +56,10 @@ ROOT_URLCONF = 'api.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'ngApp', 'dist')],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            #  os.path.join(BASE_DIR, 'ngApp', 'dist')
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -148,8 +151,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,"api" ,"static"),
-    os.path.join(BASE_DIR, 'ngApp', 'dist')
+    os.path.join(BASE_DIR, "api", "static"),
+    os.path.join(BASE_DIR, 'ngApp', 'dist'),
+    os.path.join(BASE_DIR, 'ngApp','dist' ,'static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
@@ -164,8 +168,6 @@ REST_FRAMEWORK = {
     ),
     'PAGE_SIZE': 10,
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
     )
 }
@@ -173,5 +175,6 @@ REST_FRAMEWORK = {
 ADMIN_LOGIN = 'ranjeet@checkit.com'
 ADMIN_PASSWORD = 'rjsdtr123'
 
-ANGULAR_URL = '/ng/'
+ANGULAR_URL = '/app/'
 ANGULAR_ROOT = os.path.join(BASE_DIR, 'ngApp/')
+GET_USER_DETAILS_END_POINT = 'get_my_details'

@@ -1,8 +1,10 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.authtoken.models import Token
 from api.serializers import UserSerializer, GroupSerializer
 from auth.permissions import IsAuthenticatedOrReadOrCreateUser
-
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -12,6 +14,21 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
 
     permission_classes = (IsAuthenticatedOrReadOrCreateUser,)
+    def retrieve(self, request, pk=None):
+        """
+        If provided 'pk' is "me" then return the current user.
+        """
+        if isinstance(pk, str) and pk == settings.GET_USER_DETAILS_END_POINT:
+            return Response(UserSerializer(request.user).data)
+        return super(UserViewSet, self).retrieve(request, pk)
+    # def create(self, request, *args, **kwargs):
+    #     response = super(UserViewSet, self).create(request, *args, **kwargs)
+    #     if response.status_code == status.HTTP_201_CREATED:
+    #         data = response.data
+            
+    #     print(response.data)
+        
+    #     return response
 
 
 class GroupViewSet(viewsets.ModelViewSet):
