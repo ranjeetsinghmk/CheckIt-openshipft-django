@@ -15,3 +15,13 @@ footer{
     margin: 0px auto;
     background: #444;
 }
+
+footer .footer-social-buttons ul{
+    list-style: none;
+}
+footer .footer-social-buttons ul li{
+    display: inline-flex;
+}
+footer .footer-social-buttons ul li a{
+    font-style: normal;
+}

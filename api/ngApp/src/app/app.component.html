@@ -1,8 +1,8 @@
 <md-toolbar [color]="toolbar_color">
-  <img src="{{icon}}" [routerLink]="['/']" style="background: #eee;"  style="cursor:pointer;" height="40" width="60"/>
-  <span class="take-rest-space"></span>
-  <button md-button color="primary" [routerLink]="['/register']">JOIN</button>
-  <button md-raised-button color="accent">GETIN</button>
+    <img src="{{icon}}" [routerLink]="['/']" style="background: #eee;" style="cursor:pointer;" height="40" width="60" />
+    <span class="take-rest-space"></span>
+    <button md-button color="primary" [routerLink]="['/register']">JOIN</button>
+    <button md-raised-button color="accent">GETIN</button>
 </md-toolbar>
 <!--<button md-fab>
     <md-icon class="md-24">add</md-icon>
@@ -12,5 +12,14 @@
 </button>-->
 <router-outlet></router-outlet>
 <footer>
-
+    <a md-button color="primary" href="http://profile-dtr.rhcloud.com/">Main Site</a>
+    <button md-mini-fab (click)="window.open('http://profile-dtr.rhcloud.com')">
+            <md-icon class="md-24">web</md-icon>
+    </button>
+    <button md-mini-fab href="http://www.youtube.com/channel/UC3HXVelR0xZ8BePzP-Dqw_w">
+            <md-icon class="md-24">video_library</md-icon>
+    </button>
+    <button md-mini-fab  href="https://www.facebook.com/Profileatdtr.rj">
+            <md-icon class="md-24">face</md-icon>
+    </button>
 </footer>

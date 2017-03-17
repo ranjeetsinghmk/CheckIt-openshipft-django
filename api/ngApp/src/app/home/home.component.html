@@ -1,0 +1,19 @@
+<checkit-autocomplete style="margin: 0px auto;width: 400px;">
+</checkit-autocomplete>
+<div *ngIf="authenticated">
+    <md-grid-list cols="3">
+        <md-grid-tile *ngFor="let user of users">
+            <md-card>
+                <img md-card-image src="https://material.angularjs.org/latest/img/washedout.png">
+                <md-card-title>{{user.name}}</md-card-title>
+                <md-card-content>
+                    <p>You can also contact me on <a href="mailto:{{user.email}}">Email</a></p>
+                </md-card-content>
+                <md-card-actions align="end">
+                    <button md-button>LIKE</button>
+                    <button md-button>SHARE</button>
+                </md-card-actions>
+            </md-card>
+        </md-grid-tile>
+    </md-grid-list>
+</div>
