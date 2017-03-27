@@ -15,7 +15,7 @@ export class UserService {
         return this.http.get('/api/users/get_my_details/', this.jwt()).map((response: Response) => response.json());
     }
 
-    getAll() {
+    getAll(){
         return this.http.get('/api/users', this.jwt()).map((response: Response) => response.json());
     }
 

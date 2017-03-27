@@ -10,23 +10,11 @@ export class HomeComponent implements OnInit {
     authenticated: boolean;
     users: User[];
     fetchUsers() {
-        // this.userService.getAll().map(re=>{
-        //     console.log(re);
-        //     this.users = re
-        // })
-        this.users = [{
-            id: 1,
-            username: "usr",
-            email: "em@em.com",
-            name: "First user",
-            password: ""
-        }, {
-            id: 2,
-            username: "usr",
-            email: "em@em.com",
-            name: "Second uses",
-            password: ""
-        }];
+        this.userService.getAll().map(re => {
+            this.users = re
+            console.log("Going..");
+        });
+        this.authenticated = true;
     }
 
     ngOnInit(): void {
@@ -36,6 +24,6 @@ export class HomeComponent implements OnInit {
     constructor(
         private userService: UserService,
         private alertService: AlertService) {
-            this.authenticated = false;
-         }
+        this.authenticated = false;
+    }
 }

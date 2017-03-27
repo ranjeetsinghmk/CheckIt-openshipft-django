@@ -2,65 +2,23 @@ import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import 'rxjs/add/operator/startWith';
 import { Observable } from 'rxjs/Observable';
+
+import { User } from '../../_models/user';
 @Component({
     selector: 'checkit-autocomplete',
     templateUrl: './autocomplete.html',
 })
 export class CheckItAutoComplete {
     searchCntrl = new FormControl();
-    filteredItems: Observable<string[]>;
+    filteredItems: Observable<User[]>;
 
     items = [
-        'Alabama',
-        'Alaska',
-        'Arizona',
-        'Arkansas',
-        'California',
-        'Colorado',
-        'Connecticut',
-        'Delaware',
-        'Florida',
-        'Georgia',
-        'Hawaii',
-        'Idaho',
-        'Illinois',
-        'Indiana',
-        'Iowa',
-        'Kansas',
-        'Kentucky',
-        'Louisiana',
-        'Maine',
-        'Maryland',
-        'Massachusetts',
-        'Michigan',
-        'Minnesota',
-        'Mississippi',
-        'Missouri',
-        'Montana',
-        'Nebraska',
-        'Nevada',
-        'New Hampshire',
-        'New Jersey',
-        'New Mexico',
-        'New York',
-        'North Carolina',
-        'North Dakota',
-        'Ohio',
-        'Oklahoma',
-        'Oregon',
-        'Pennsylvania',
-        'Rhode Island',
-        'South Carolina',
-        'South Dakota',
-        'Tennessee',
-        'Texas',
-        'Utah',
-        'Vermont',
-        'Virginia',
-        'Washington',
-        'West Virginia',
-        'Wisconsin',
-        'Wyoming',
+        new User({ "id": 6, "email": "new@gmail.com", "username": "new" }),
+        new User({ "id": 5, "email": "asd@cd.com", "username": "as" }),
+        new User({ "id": 4, "email": "sfsd@asds.com", "username": "sfs" }),
+        new User({ "id": 3, "email": "user2@rjsite.com", "username": "user2" }),
+        new User({ "id": 2, "email": "user1@rjsite.com", "username": "user1" }),
+        new User({ "id": 1, "email": "admin@rjsite.com", "username": "ranjeetsingh" })
     ];
 
     ngOnInit() {
@@ -70,11 +28,11 @@ export class CheckItAutoComplete {
             .map(item => item ? this.filter(item) : this.items);
     }
 
-    filter(name: string): string[] {
-        return name ? this.items.filter(option => new RegExp(name, 'gi').test(option)) : this.items;
+    filter(name: string): User[] {
+        return name ? this.items.filter(option => new RegExp(name, 'gi').test(option.name)) : this.items;
     }
-    displayFn(item: any): string {
-        return item ? item + " T" : item;
+    displayFn(item: User): string {
+        return item ? item.name: null;
     }
 
 }
