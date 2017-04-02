@@ -12,13 +12,15 @@ import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
 import { UserService, AlertService } from './_services/index';
 import { StringUtil } from './_utils/index';
+import { UpdatesComponent } from './updates/updates.component';
 
 @NgModule({
   declarations: [
     CheckItAutoComplete,
     AppComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    UpdatesComponent
   ],
   imports: [
     BrowserModule,

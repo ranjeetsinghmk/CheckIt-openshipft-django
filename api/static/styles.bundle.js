@@ -57,7 +57,7 @@ module.exports = function() {
 
 /***/ }),
 
-/***/ 495:
+/***/ 496:
 /***/ (function(module, exports) {
 
 /*
@@ -73,7 +73,7 @@ var stylesInDom = {},
 		};
 	},
 	isOldIE = memoize(function() {
-		return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+		return /msie [6-9]\b/.test(self.navigator.userAgent.toLowerCase());
 	}),
 	getHeadElement = memoize(function () {
 		return document.head || document.getElementsByTagName("head")[0];
@@ -310,50 +310,23 @@ function updateLink(linkElement, obj) {
 
 /***/ }),
 
-/***/ 498:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(812);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(495)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!./../../node_modules/css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!./../../node_modules/postcss-loader/index.js!./../../node_modules/sass-loader/index.js!./uni-theme.scss", function() {
-			var newContent = require("!!./../../node_modules/css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!./../../node_modules/postcss-loader/index.js!./../../node_modules/sass-loader/index.js!./uni-theme.scss");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
 /***/ 499:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(813);
+var content = __webpack_require__(815);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(495)(content, {});
+var update = __webpack_require__(496)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!./../node_modules/css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!./../node_modules/postcss-loader/index.js!./styles.css", function() {
-			var newContent = require("!!./../node_modules/css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!./../node_modules/postcss-loader/index.js!./styles.css");
+		module.hot.accept("!!../../node_modules/css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../node_modules/postcss-loader/index.js!../../node_modules/sass-loader/index.js!./uni-theme.scss", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../node_modules/postcss-loader/index.js!../../node_modules/sass-loader/index.js!./uni-theme.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -364,7 +337,34 @@ if(false) {
 
 /***/ }),
 
-/***/ 812:
+/***/ 500:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(816);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(496)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../node_modules/css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../node_modules/postcss-loader/index.js!./styles.css", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../node_modules/postcss-loader/index.js!./styles.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 815:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(185)();
@@ -379,7 +379,7 @@ exports.push([module.i, "/**\n * Applies styles for users in high contrast mode.
 
 /***/ }),
 
-/***/ 813:
+/***/ 816:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(185)();
@@ -387,21 +387,21 @@ exports = module.exports = __webpack_require__(185)();
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\nbody{\r\n    background: #fffeee;\r\n    margin: 0px auto;\r\n}\r\n\r\n.take-rest-space{\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1 1 auto;\r\n            flex: 1 1 auto;\r\n}\r\n\r\nfooter{\r\n    min-height: 200px;\r\n    width: 100%;\r\n    margin: 0px auto;\r\n    background: #444;\r\n}", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\nbody{\r\n    background: #fffeee;\r\n    margin: 0px auto;\r\n}\r\n\r\n.take-rest-space{\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1 1 auto;\r\n            flex: 1 1 auto;\r\n}\r\n\r\nfooter{\r\n    min-height: 200px;\r\n    width: 100%;\r\n    margin: 0px auto;\r\n    background: #444;\r\n}\r\n\r\nfooter .footer-social-buttons ul{\r\n    list-style: none;\r\n}\r\nfooter .footer-social-buttons ul li{\r\n    display: -webkit-inline-box;\r\n    display: -ms-inline-flexbox;\r\n    display: inline-flex;\r\n}\r\nfooter .footer-social-buttons ul li a{\r\n    font-style: normal;\r\n}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 862:
+/***/ 868:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(499);
-module.exports = __webpack_require__(498);
+__webpack_require__(500);
+module.exports = __webpack_require__(499);
 
 
 /***/ })
 
-},[862]);
+},[868]);
 //# sourceMappingURL=styles.bundle.js.map
