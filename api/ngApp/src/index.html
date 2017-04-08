@@ -5,14 +5,43 @@
   <base href="/app">
   <meta charset="utf-8">
   <title>CheckIt</title>
-
+  <script>
+    function getChar() {
+      var vl = (Math.random() * 10000) % 17;
+      if (vl <= 10) {
+        return '' + vl;
+      } else if (vl == 11) {
+        return 'a';
+      } else if (vl == 12) {
+        return 'b';
+      } else if (vl == 13) {
+        return 'c';
+      } else if (vl == 14) {
+        return 'd';
+      } else if (vl == 15) {
+        return 'e';
+      } else {
+        return 'f';
+      }
+    }
+    setTimeout(function () {
+      console.log("back1" + document.getElementById("circle").style.backgroundColor);
+      document.getElementById("circle").style.backgroundColor = "#" + getChar() + getChar() + getChar() + getChar() + getChar() + getChar();
+      console.log("back" + document.getElementById("circle").style.backgroundColor);
+    }, 1000);
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="static/favicon.ico">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-  <app-root>Loading...</app-root>
+  <app-root>
+    <div style="width: 100%;height: 100%;background-color: #ffeefe">
+      <div id="circle" style="margin: 0px auto;width:100px;height:100px;"> Loading....</div>
+    </div>
+    </md-progress-circle>
+  </app-root>
 </body>
 
 </html>
