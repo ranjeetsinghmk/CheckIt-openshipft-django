@@ -27,5 +27,8 @@ export class ProductsComponent implements OnInit {
             this.tiles = this.process();
         });
     }
+    ngOnDestroy() {
+        this.subscription.unsubscribe();
+    }
 
 }

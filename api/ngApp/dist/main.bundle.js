@@ -383,6 +383,9 @@ var ProductsComponent = (function () {
             _this.tiles = _this.process();
         });
     };
+    ProductsComponent.prototype.ngOnDestroy = function () {
+        this.subscription.unsubscribe();
+    };
     return ProductsComponent;
 }());
 ProductsComponent = __decorate([
