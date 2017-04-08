@@ -1,22 +1,48 @@
+{% load static %}
 <!doctype html>
 <html>
 
 <head>
   <base href="/app">
   <meta charset="utf-8">
-  <title>CheckIt</title>
+  <title>Material</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
   <app-root>
-    <div style="width: 100%;height: 800px;background-color: #ffeefe">
-      <div id="circle" style="margin: 0px auto;width:100px;height:100px;"> Loading....</div>
+    <div style="width: 100%;height: 100%;background-color: #ffeefe; margin: 0px auto;">
+      <div id="circle" style="margin: 0px auto;width:100px;height:100px;margin: 0px auto;"> Loading....</div>
     </div>
   </app-root>
+    <script>
+    function getChar() {
+      var vl = Math.floor((Math.random() * 10000)) % 17;
+      if (vl <= 10) {
+        return '' + vl;
+      } else if (vl == 11) {
+        return 'a';
+      } else if (vl == 12) {
+        return 'b';
+      } else if (vl == 13) {
+        return 'c';
+      } else if (vl == 14) {
+        return 'd';
+      } else if (vl == 15) {
+        return 'e';
+      } else {
+        return 'f';
+      }
+    }
+  </script>
+  <script type="text/javascript" src="{% static 'inline.bundle.js' %}"></script>
+  <script type="text/javascript" src="{% static 'styles.bundle.js' %}"></script>
+  <script type="text/javascript" src="{% static 'vendor.bundle.js' %}"></script>
+  <script type="text/javascript" src="{% static 'main.bundle.js' %}"></script>
+
 </body>
 
 </html>
