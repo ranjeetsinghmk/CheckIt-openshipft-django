@@ -1,12 +1,22 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 
+import { Observable } from 'rxjs/Observable';
+import { Subject } from "rxjs";
 import { User } from '../_models/index';
 
 @Injectable()
 export class UserService {
     constructor(private http: Http) { }
 
+    items = [
+        new User({ "id": 6, "email": "new@gmail.com", "username": "new" }),
+        new User({ "id": 5, "email": "asd@cd.com", "username": "as" }),
+        new User({ "id": 4, "email": "sfsd@asds.com", "username": "sfs" }),
+        new User({ "id": 3, "email": "user2@rjsite.com", "username": "user2" }),
+        new User({ "id": 2, "email": "user1@rjsite.com", "username": "user1" }),
+        new User({ "id": 1, "email": "admin@rjsite.com", "username": "ranjeetsingh" })
+    ];
     authenticate(user: User) {
         return this.http.post('/api-token-auth/', user).map((response: Response) => response.json());
     }
@@ -15,7 +25,11 @@ export class UserService {
         return this.http.get('/api/users/get_my_details/', this.jwt()).map((response: Response) => response.json());
     }
 
-    getAll(){
+    getAllLocal() {
+        return this.items;
+    }
+
+    getAll(): Observable<User[]> {
         return this.http.get('/api/users', this.jwt()).map((response: Response) => response.json());
     }
 
@@ -37,7 +51,7 @@ export class UserService {
 
 
     isAuthenticated(): boolean {
-        return JSON.parse(localStorage.getItem('currentUser'));
+        return true;//JSON.parse(localStorage.getItem('currentUser'));
     }
 
     // private helper methods

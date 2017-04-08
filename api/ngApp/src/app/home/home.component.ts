@@ -11,14 +11,16 @@ export class HomeComponent implements OnInit {
     users: User[];
     fetchUsers() {
         this.userService.getAll().map(re => {
-            this.users = re
-            console.log("Going..");
+            console.log("Going.. " + re);
+            this.users = re;
         });
+        // this.users = this.userService.getAllLocal();
+        // console.log(this.users);
         this.authenticated = true;
     }
 
     ngOnInit(): void {
-        this.authenticated = this.userService.isAuthenticated();
+        this.authenticated = true;//this.userService.isAuthenticated();
         this.fetchUsers();
     }
     constructor(

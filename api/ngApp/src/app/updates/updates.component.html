@@ -1,3 +1,20 @@
-<div>
-    
+<!--<div [ngStyle]="{background: 'url(/img/' + item.img + ')', width: '200px', height: '150px'"></div>-->
+<div fxLayout="row" [style.background]="'url(' + back_url + ')'" [ngStyle]="{'margin-top':'5px', 'min-height':'300px', 'background-size': '600px'}">
+    <div fxLayout="row" fxFlex="80" [ngStyle]="{}">
+        <md-card *ngFor="let item of menus" (click)=onclick(item) [ngStyle]="{'cursor':'pointer', 'width':'200px'}" flex="25"
+            layout-wrap>
+            <img md-card-image src="{{item.photo}}" height="100" width="200">
+            <md-card-title>{{item.title}}</md-card-title>
+            <md-card-content>
+                <p>{{item.desc}}</p>
+            </md-card-content>
+            <!--<md-card-actions align="end">
+                    <button md-button>LIKE</button>
+                    <button md-button>SHARE</button>
+                </md-card-actions>-->
+        </md-card>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="right" [style.background]="'url(' + right_image + ')'" [ngStyle]="{'margin':'10px auto', 'height':'300px', 'width':'210px' ,'background':'url('+right_image+')', 'background-size':'cover'}">
+
+    </div>
 </div>

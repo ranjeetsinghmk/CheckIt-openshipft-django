@@ -1,13 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { UpdatesService } from "../_services/updates";
 
 @Component({
-    selector: "update-component",
-    templateUrl: 'updates.component',
-    styles: [
-        ''
-    ]
+  selector: "update-component",
+  templateUrl: './updates.component.html',
+  styleUrls:['./updates.component.css']
 })
 
-export class UpdatesComponent{
+export class UpdatesComponent implements OnInit {
+  message: string;
+  primary = "#e44";
+  back_url = "./static/updates/assets/img/back.jpg";
+  right_image = "./static/updates/assets/img/games.png";
+  menus;
+  constructor(private updatesService: UpdatesService) {
+    this.message = "Welcome";
+  }
 
+  onclick(menu){
+    alert(menu.title);
+  }
+
+  ngOnInit(){
+    this.menus = this.updatesService.getUpdatesMenuItems();
+  }
 }

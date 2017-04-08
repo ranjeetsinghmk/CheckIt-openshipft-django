@@ -1,8 +1,12 @@
-<md-toolbar [color]="toolbar_color">
-    <img src="{{icon}}" [routerLink]="['/']" style="background: #eee;" style="cursor:pointer;" height="40" width="60" />
+<md-toolbar [color]="primary" class="mat-elevation-z3">
+    <img src="{{icon}}" [routerLink]="['/']" style="margin-top:50px;cursor:pointer;" height="80" width="80" />
     <span class="take-rest-space"></span>
     <button md-button color="primary" [routerLink]="['/register']">JOIN</button>
     <button md-raised-button color="accent">GETIN</button>
+    <md-toolbar-row>
+        <span class="take-rest-space"></span>
+        <p [innerHtml]="creativeBlock"></p>
+    </md-toolbar-row>
 </md-toolbar>
 <!--<button md-fab>
     <md-icon class="md-24">add</md-icon>
@@ -19,7 +23,7 @@
     <button md-mini-fab href="http://www.youtube.com/channel/UC3HXVelR0xZ8BePzP-Dqw_w">
             <md-icon class="md-24">video_library</md-icon>
     </button>
-    <button md-mini-fab  href="https://www.facebook.com/Profileatdtr.rj">
+    <button md-mini-fab href="https://www.facebook.com/Profileatdtr.rj">
             <md-icon class="md-24">face</md-icon>
     </button>
 </footer>
