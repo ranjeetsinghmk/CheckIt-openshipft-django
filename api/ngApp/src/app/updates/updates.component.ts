@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 import { UpdatesService } from "../_services/updates";
 
+
 @Component({
   selector: "update-component",
   templateUrl: './updates.component.html',
-  styleUrls:['./updates.component.css']
+  styleUrls: ['./updates.component.css']
 })
 
 export class UpdatesComponent implements OnInit {
@@ -18,11 +19,7 @@ export class UpdatesComponent implements OnInit {
     this.message = "Welcome";
   }
 
-  onclick(menu){
-    alert(menu.title);
-  }
-
-  ngOnInit(){
+  ngOnInit() {
     this.menus = this.updatesService.getUpdatesMenuItems();
   }
 }

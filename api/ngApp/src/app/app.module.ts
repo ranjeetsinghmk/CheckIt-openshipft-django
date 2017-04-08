@@ -8,7 +8,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { UpdatesComponent } from './updates/updates.component';
 import { AppComponent } from './app.component';
 import { CheckItAutoComplete } from './_utils/components/autocomplete';
+import { NotFoundCompontent } from './_utils/components/app.notfound';
 import { RegisterComponent } from './accounts/register.component';
+import { ProductsComponent } from "./products/products.component";
 import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
 import { UserService, AlertService } from './_services/index';
@@ -21,7 +23,9 @@ import { StringUtil } from './_utils/index';
     UpdatesComponent,
     AppComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    NotFoundCompontent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
