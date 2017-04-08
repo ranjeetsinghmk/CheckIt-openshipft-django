@@ -7,7 +7,7 @@
   <title>CheckIt</title>
   <script>
     function getChar() {
-      var vl = (Math.random() * 10000) % 17;
+      var vl = Math.floor((Math.random() * 10000)) % 17;
       if (vl <= 10) {
         return '' + vl;
       } else if (vl == 11) {
