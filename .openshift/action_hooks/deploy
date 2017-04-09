@@ -10,6 +10,7 @@ export PYTHON_EGG_CACHE=${OPENSHIFT_HOME_DIR}python/virtualenv/venv/lib/python3.
 
 echo "Executing 'python ${OPENSHIFT_REPO_DIR}api/manage.py collectstatic --noinput -v0'"
 python "$OPENSHIFT_REPO_DIR"api/manage.py collectstatic --noinput -v0
+pip install -r "$OPENSHIFT_REPO_DIR"requirements.txt
 python "$OPENSHIFT_REPO_DIR"api/manage.py makemigrations members --noinput -v0
 python "$OPENSHIFT_REPO_DIR"api/manage.py makemigrations --noinput -v0
 python "$OPENSHIFT_REPO_DIR"api/manage.py migrate --noinput -v0
