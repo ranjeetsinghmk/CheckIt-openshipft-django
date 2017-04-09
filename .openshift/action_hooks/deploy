@@ -5,7 +5,7 @@
 # ruby, etc.
 
 source ${OPENSHIFT_HOMEDIR}python/virtualenv/venv/bin/activate;
-which python;
+echo "$(which python)";
 export PYTHON_EGG_CACHE=${OPENSHIFT_HOME_DIR}python/virtualenv/venv/lib/python3.5/site-packages
 
 pip install -r "$OPENSHIFT_REPO_DIR"requirements.txt
