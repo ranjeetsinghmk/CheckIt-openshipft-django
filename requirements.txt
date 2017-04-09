@@ -2,4 +2,4 @@ Django>=1.10
 PyMySQL
 djangorestframework
 pygments
-corsheaders
+django-cors-headers
