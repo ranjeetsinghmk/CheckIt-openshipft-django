@@ -3,5 +3,5 @@ cd ngApp;
 ng build .;
 cd ..;
 . ~/CheckIt/env/bin/activate;
-python manage.py collectstatic -Y;
+python manage.py collectstatic --noinput;
 git add -A; git commit -m "New Change"; git push

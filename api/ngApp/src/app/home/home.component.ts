@@ -9,9 +9,11 @@ import { AlertService, UserService } from '../_services/index';
 export class HomeComponent implements OnInit {
     authenticated: boolean;
     users: User[];
+    data:any;
     fetchUsers() {
         this.userService.getAll().map(re => {
             console.log("Going.. " + re);
+            this.data = JSON.stringify(re);
             this.users = re;
         });
         // this.users = this.userService.getAllLocal();
@@ -20,6 +22,7 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        console.log('Fetching users')
         this.authenticated = true;//this.userService.isAuthenticated();
         this.fetchUsers();
     }

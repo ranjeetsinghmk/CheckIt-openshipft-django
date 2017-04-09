@@ -30,7 +30,14 @@ export class UserService {
     }
 
     getAll(): Observable<User[]> {
-        return this.http.get('/api/users', this.jwt()).map((response: Response) => response.json());
+        this.http.get('http://api-dtr.rhcloud.com/api/users.json')
+        .map(res => res.json())
+        .subscribe(
+            data => console.log('data: ' + data),
+            err => console.error('err: ' + err),
+            () => console.log('Compelete d  d d')
+        );
+        return this.http.get('http://127.0.0.1:8000/api/users.json').map((response: Response) => response.json());
     }
 
     getById(id: number) {
@@ -62,6 +69,8 @@ export class UserService {
         if (currentUser && currentUser.token) {
             let headers = new Headers({ 'Authorization': 'Token ' + currentUser.token });
             return new RequestOptions({ headers: headers });
+        }else{
+            return new RequestOptions();
         }
     }
 }

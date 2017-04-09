@@ -178,3 +178,7 @@ ADMIN_PASSWORD = 'rjsdtr123'
 ANGULAR_URL = '/app/'
 ANGULAR_ROOT = os.path.join(BASE_DIR, 'ngApp/')
 GET_USER_DETAILS_END_POINT = 'get_my_details'
+
+CORS_ORIGIN_WHITELIST = (
+    '127.0.0.1:4200'
+)

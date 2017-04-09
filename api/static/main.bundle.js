@@ -322,6 +322,7 @@ var HomeComponent = (function () {
         var _this = this;
         this.userService.getAll().map(function (re) {
             console.log("Going.. " + re);
+            _this.data = JSON.stringify(re);
             _this.users = re;
         });
         // this.users = this.userService.getAllLocal();
@@ -329,6 +330,7 @@ var HomeComponent = (function () {
         this.authenticated = true;
     };
     HomeComponent.prototype.ngOnInit = function () {
+        console.log('Fetching users');
         this.authenticated = true; //this.userService.isAuthenticated();
         this.fetchUsers();
     };
@@ -606,7 +608,10 @@ var UserService = (function () {
         return this.items;
     };
     UserService.prototype.getAll = function () {
-        return this.http.get('/api/users', this.jwt()).map(function (response) { return response.json(); });
+        this.http.get('http://api-dtr.rhcloud.com/api/users.json')
+            .map(function (res) { return res.json(); })
+            .subscribe(function (data) { return console.log('data: ' + data); }, function (err) { return console.error('err: ' + err); }, function () { return console.log('Compelete d  d d'); });
+        return this.http.get('http://127.0.0.1:8000/api/users.json').map(function (response) { return response.json(); });
     };
     UserService.prototype.getById = function (id) {
         return this.http.get('/api/users/' + id, this.jwt()).map(function (response) { return response.json(); });
@@ -630,6 +635,9 @@ var UserService = (function () {
         if (currentUser && currentUser.token) {
             var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]({ 'Authorization': 'Token ' + currentUser.token });
             return new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        }
+        else {
+            return new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]();
         }
     };
     return UserService;
@@ -1024,7 +1032,7 @@ module.exports = "<md-toolbar [color]=\"primary\" class=\"mat-elevation-z3\">\r\
 /***/ 518:
 /***/ (function(module, exports) {
 
-module.exports = "<update-component></update-component>\n<checkit-autocomplete style=\"margin: 0px auto;width: 400px;\"></checkit-autocomplete>\n<div *ngIf=\"authenticated\">\n    <md-grid-list cols=\"3\">\n        <md-grid-tile *ngFor=\"let user of users\">\n            <md-card>\n                <img md-card-image src=\"https://material.angularjs.org/latest/img/washedout.png\">\n                <md-card-title>{{user.name}}</md-card-title>\n                <md-card-content>\n                    <p>You can also contact me on <a href=\"mailto:{{user.email}}\">Email</a></p>\n                </md-card-content>\n                <md-card-actions align=\"end\">\n                    <button md-button>LIKE</button>\n                    <button md-button>SHARE</button>\n                </md-card-actions>\n            </md-card>\n        </md-grid-tile>\n    </md-grid-list>\n</div>"
+module.exports = "{{data}}\n<!--<update-component></update-component>-->\n<!--<checkit-autocomplete style=\"margin: 0px auto;width: 400px;\"></checkit-autocomplete>-->\n<!--<div *ngIf=\"authenticated\">-->\n    <md-grid-list cols=\"3\">\n        <md-grid-tile *ngFor=\"let user of users\">\n            <md-card>\n                <img md-card-image src=\"https://material.angularjs.org/latest/img/washedout.png\">\n                <md-card-title>{{user.name}}</md-card-title>\n                <md-card-content>\n                    <p>You can also contact me on <a href=\"mailto:{{user.email}}\">Email</a></p>\n                </md-card-content>\n                <md-card-actions align=\"end\">\n                    <button md-button>LIKE</button>\n                    <button md-button>SHARE</button>\n                </md-card-actions>\n            </md-card>\n        </md-grid-tile>\n    </md-grid-list>\n<!--</div>-->"
 
 /***/ }),
 
