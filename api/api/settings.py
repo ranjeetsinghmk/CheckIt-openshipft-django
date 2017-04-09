@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
     'members.apps.MembersConfig'
 ]
 
@@ -46,6 +47,8 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -180,5 +183,6 @@ ANGULAR_ROOT = os.path.join(BASE_DIR, 'ngApp/')
 GET_USER_DETAILS_END_POINT = 'get_my_details'
 
 CORS_ORIGIN_WHITELIST = (
-    '127.0.0.1:4200'
+    '127.0.0.1:4200',
+    'localhost:4200'
 )

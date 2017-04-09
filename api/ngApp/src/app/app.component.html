@@ -1,6 +1,10 @@
 <md-toolbar [color]="primary" class="mat-elevation-z3">
     <img src="{{icon}}" [routerLink]="['/']" style="margin-top:50px;cursor:pointer;" height="80" width="80" />
     <span class="take-rest-space"></span>
+    <div style="height:100%">
+        <checkit-autocomplete style="margin: 0px auto;width: 400px;"></checkit-autocomplete>
+    </div>
+    <span class="take-rest-space"></span>
     <button md-button color="primary" [routerLink]="['/register']">JOIN</button>
     <button md-raised-button color="accent">GETIN</button>
     <md-toolbar-row>
