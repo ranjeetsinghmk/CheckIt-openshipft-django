@@ -23,9 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5c$@^*mf=bj-qik6)m2ea-#ser@)016y#syl67k%1i$z+6&r_g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = not os.environ.get('OPENSHIFT_HOMEDIR')
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'api-dtr.rhcloud.com']
+
+ALLOWED_HOSTS = ['api-checkitsols.rhcloud.com']
+
+if DEBUG:
+    ALLOWED_HOSTS.append('127.0.0.1:8000')
 
 # Application definition
 
