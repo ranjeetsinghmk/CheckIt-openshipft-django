@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { Autosize } from '../../node_modules/angular2-autosize/angular2-autosize';
 import { UpdatesComponent } from './updates/updates.component';
 import { AppComponent } from './app.component';
 import { CheckItAutoComplete } from './_utils/components/autocomplete';
@@ -19,6 +20,7 @@ import { StringUtil } from './_utils/index';
 
 @NgModule({
   declarations: [
+    Autosize,
     CheckItAutoComplete,
     UpdatesComponent,
     AppComponent,

@@ -1,22 +1,24 @@
 <!--<div [ngStyle]="{background: 'url(/img/' + item.img + ')', width: '200px', height: '150px'"></div>-->
-<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5px" fxLayoutWrap [style.background]="'url(' + back_url + ')'"
-    [ngStyle]="{'margin-top':'5px', 'min-height':'300px', 'background-size': '600px'}">
-    <div fxLayout="row" fxFlexOffset="10px" fxLayoutAlign="start center" fxLayout.xm="column" fxFlex="80" fxLayoutGap="5px" fxLayoutWrap
-        [ngStyle]="{}">
-        <md-card *ngFor="let item of menus" [routerLink]="['/products']" [ngStyle]="{'cursor':'pointer', 'width':'200px'}" flex="25"
-            layout-wrap>
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="5px" fxLayoutWrap [ngStyle]="{'margin-top':'10px', 'min-height':'300px', 'background-size': '600px'}">
+    <div fxLayout="row" fxLayoutAlign="start left" fxLayout.xm="column" fxFlex="80" fxLayoutGap="15px" fxLayoutWrap>
+        <!--<md-card *ngFor="let item of menus" [routerLink]="['/products']" [ngStyle]="{'cursor':'pointer'}">
             <img md-card-image src="{{item.photo}}" height="100" width="200">
             <md-card-title>{{item.title}}</md-card-title>
             <md-card-content>
                 <p>{{item.desc}}</p>
             </md-card-content>
-            <!--<md-card-actions align="end">
-                    <button md-button>LIKE</button>
-                    <button md-button>SHARE</button>
-                </md-card-actions>-->
-        </md-card>
+        </md-card>-->
+        <div fxLayout="column" *ngFor="let item of menus" [routerLink]="['/products']" [ngStyle]="{'cursor':'pointer', 'width':'200px', 'height':'200px', 'background':'url('+item.photo+')', 'background-size':'cover'}" class="menu">
+            <span style="background-color: #f0f; padding: 5px;">
+                <font color="white" font="14">{{item.title}}</font>
+            </span>
+            <span fxFlex></span>
+            <div fxFlexAlign="bottom" style="color:white;height:100px;padding:5px;font-size:12px;" class="menuitem">
+                {{item.desc}}
+            </div>
+        </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="right" [style.background]="'url(' + right_image + ')'" [ngStyle]="{'margin':'10px auto', 'height':'300px', 'width':'210px' ,'background':'url('+right_image+')', 'background-size':'cover'}">
+    <div fxLayout="row" fxLayoutAlign="right" [ngStyle]="{'margin':'10px auto', 'height':'300px', 'width':'210px' ,'background':'url('+right_image+')', 'background-size':'cover'}">
 
     </div>
 </div>

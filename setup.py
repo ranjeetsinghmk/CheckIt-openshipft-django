@@ -10,5 +10,5 @@ setup(name='checkit api',
       author_email='sranjeet748@gmail.com',
       url='http://www.python.org/sigs/distutils-sig/',
       install_requires=['Django>=1.10', 'PyMySQL',
-                        'djangorestframework', 'pygments', 'django-cors-headers'],
+                        'djangorestframework', 'pygments', 'django-cors-headers','django-filter'],
       )

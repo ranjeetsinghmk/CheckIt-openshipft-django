@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
     fetchingUsers: boolean;
 
     addUserWithDelay(users: User[], i) {
-        console.log('-> ' + users.length + " " + i);
         if (i >= users.length) {
             this.fetchingUsers = false;
             console.log('returning...');

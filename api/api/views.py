@@ -3,8 +3,11 @@ from rest_framework import viewsets
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
+from rest_framework import filters
+from django_filters.rest_framework import DjangoFilterBackend
 from api.serializers import UserSerializer, GroupSerializer
 from auth.permissions import IsAuthenticatedOrReadOrCreateUser
+
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -12,8 +15,11 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
-
+    filter_backends = (DjangoFilterBackend, filters.SearchFilter)
+    filter_fields = ('username', 'email',)
+    search_fields = ('username', 'email',)
     permission_classes = (IsAuthenticatedOrReadOrCreateUser,)
+
     def retrieve(self, request, pk=None):
         """
         If provided 'pk' is "me" then return the current user.
@@ -25,9 +31,9 @@ class UserViewSet(viewsets.ModelViewSet):
     #     response = super(UserViewSet, self).create(request, *args, **kwargs)
     #     if response.status_code == status.HTTP_201_CREATED:
     #         data = response.data
-            
+
     #     print(response.data)
-        
+
     #     return response
 
 
@@ -40,6 +46,8 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 from django.views.generic import TemplateView, View
 from api import settings
+
+
 class AngularApp(TemplateView):
     template_name = 'index.html'
 

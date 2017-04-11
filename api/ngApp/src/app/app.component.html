@@ -1,16 +1,15 @@
-<md-toolbar [color]="primary" class="mat-elevation-z3">
-    <img src="{{icon}}" [routerLink]="['/']" style="margin-top:50px;cursor:pointer;" height="80" width="80" />
-    <span class="take-rest-space"></span>
-    <div style="height:100%">
-        <checkit-autocomplete style="margin: 0px auto;width: 400px;"></checkit-autocomplete>
+<md-toolbar [color]="primary" class="mat-elevation-z3" style.xs="min-height:150px;">
+    <div fxLayout="row" style="margin:0px;width:100%;text-align: center;" fxLayoutAlign="start" style.xs="width:300px"
+        fxLayoutGap.xs="0px" fxLayoutAlign.xs="stretch" fxLayout.xs="column">
+        <img src="{{icon}}" [routerLink]="['/']" style="cursor:pointer;" height="70" width="70" />
+        <span fxFlex></span>
+        <div style="text-align: center;margin: 0px;" fxFlex="50" [innerHtml]="creativeBlock"></div>
+        <div style="min-width:300px;">
+            <checkit-autocomplete style="margin: 0px auto;"></checkit-autocomplete>
+        </div>
     </div>
-    <span class="take-rest-space"></span>
     <button md-button color="primary" [routerLink]="['/register']">JOIN</button>
     <button md-raised-button color="accent">GETIN</button>
-    <md-toolbar-row>
-        <span class="take-rest-space"></span>
-        <p [innerHtml]="creativeBlock"></p>
-    </md-toolbar-row>
 </md-toolbar>
 <!--<button md-fab>
     <md-icon class="md-24">add</md-icon>

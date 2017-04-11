@@ -18,6 +18,10 @@ export class UserService {
         return this.http.get(this.base + '/api/users/get_my_details/', this.jwt()).map((response: Response) => response.json());
     }
 
+    searchInAll(query) {
+        return this.http.get(this.base + '/api/users/?search=' + query).map((res: Response) => res.json());
+    }
+
 
     getAll(url): Observable<any> {
         return this.http.get(url || this.base + '/api/users.json').map(

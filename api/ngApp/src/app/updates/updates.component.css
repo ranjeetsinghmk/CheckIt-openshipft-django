@@ -226,3 +226,9 @@ md-card-content pre {
 }
 
 .fixed { height:275px; }
+
+.menu:hover div{
+  background-color: black;
+  opacity: 0.6;
+  transition: background-color 0.5s linear
+}
