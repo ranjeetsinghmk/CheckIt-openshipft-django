@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5c$@^*mf=bj-qik6)m2ea-#ser@)016y#syl67k%1i$z+6&r_g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False#not os.environ.get('OPENSHIFT_HOMEDIR')
+DEBUG = not os.environ.get('OPENSHIFT_HOMEDIR')
 
 ALLOWED_HOSTS = ['api-checkitsols.rhcloud.com']
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
