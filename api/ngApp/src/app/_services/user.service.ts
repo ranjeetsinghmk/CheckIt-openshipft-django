@@ -7,7 +7,7 @@ import { User } from '../_models/index';
 
 @Injectable()
 export class UserService {
-    base = "http://api-dtr.rhcloud.com" || "http://127.0.0.1:8000";
+    base = "";
     constructor(private http: Http) { }
 
     authenticate(user: User) {
