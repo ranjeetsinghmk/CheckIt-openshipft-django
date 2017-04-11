@@ -1,6 +1,6 @@
 #!/bin/sh
 cd ngApp;
-ng build .;
+ng build . --env=prod;
 cd ..;
 . ~/CheckIt/env/bin/activate;
 python manage.py collectstatic --noinput;
