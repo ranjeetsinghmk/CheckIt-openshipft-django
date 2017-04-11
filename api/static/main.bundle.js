@@ -38,7 +38,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var UserService = (function () {
     function UserService(http) {
         this.http = http;
-        this.base = "http://api-dtr.rhcloud.com/" || "http://127.0.0.1:8000";
+        this.base = "http://api-dtr.rhcloud.com" || "http://127.0.0.1:8000";
     }
     UserService.prototype.authenticate = function (user) {
         return this.http.post(this.base + '/api-token-auth/', user).map(function (response) { return response.json(); });
