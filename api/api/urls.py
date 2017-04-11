@@ -18,9 +18,15 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api-token-auth/', obtain_auth_token),
     url(r'^admin/', admin.site.urls),
-   url(r'^(?!ng/).*$', AngularApp.as_view(), name='angular_app')
+    url(r'^(?!ng/).*$', AngularApp.as_view(), name='angular_app')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 urlpatterns = urlpatterns + \
-    static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.ANGULAR_URL, document_root=settings.ANGULAR_ROOT)
+    static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + \
+    static(settings.ANGULAR_URL, document_root=settings.ANGULAR_ROOT)
+if settings.DEBUG is False:  # if DEBUG is True it will be served automatically
+    urlpatterns += patterns('',
+                            url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
+                                {'document_root': settings.STATIC_ROOT}),
+                            )
