@@ -25,7 +25,6 @@ SECRET_KEY = '5c$@^*mf=bj-qik6)m2ea-#ser@)016y#syl67k%1i$z+6&r_g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True#not os.environ.get('OPENSHIFT_HOMEDIR')
 
-os.environ["production"] = "true"
 
 ALLOWED_HOSTS = ['api-checkitsols.rhcloud.com']
 
