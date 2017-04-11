@@ -438,6 +438,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+console.log(__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */]);
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["a" /* enableProdMode */])();
 }
