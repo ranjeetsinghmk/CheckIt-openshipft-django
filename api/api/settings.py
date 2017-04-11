@@ -23,12 +23,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5c$@^*mf=bj-qik6)m2ea-#ser@)016y#syl67k%1i$z+6&r_g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = not os.environ.get('OPENSHIFT_HOMEDIR')
+DEBUG = False#not os.environ.get('OPENSHIFT_HOMEDIR')
 
 ALLOWED_HOSTS = ['api-checkitsols.rhcloud.com']
 
-if DEBUG:
-    ALLOWED_HOSTS.append('127.0.0.1:8000')
+ALLOWED_HOSTS.append('127.0.0.1:8000')
+
+ALLOWED_HOSTS.append('127.0.0.1')
+ALLOWED_HOSTS.append('localhost')
 
 # Application definition
 
@@ -164,6 +166,7 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
+print(STATIC_ROOT)
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
@@ -182,8 +185,6 @@ REST_FRAMEWORK = {
 ADMIN_LOGIN = 'ranjeet@checkit.com'
 ADMIN_PASSWORD = 'rjsdtr123'
 
-ANGULAR_URL = '/app/'
-ANGULAR_ROOT = os.path.join(BASE_DIR, 'ngApp/')
 GET_USER_DETAILS_END_POINT = 'get_my_details'
 
 CORS_ORIGIN_WHITELIST = (
