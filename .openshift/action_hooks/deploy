@@ -3,7 +3,8 @@
 # build hook has been run but before the application has been started back
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
-
+rm ${OPENSHIFT_HOMEDIR}app-root/runtime/repo/api/db.sqlite3
+cp ${OPENSHIFT_HOMEDIR}app-root/data/db.sqlite3 ${OPENSHIFT_HOMEDIR}app-root/runtime/repo/api/
 source ${OPENSHIFT_HOMEDIR}python/virtualenv/venv/bin/activate;
 echo "$(which python)";
 #export PYTHON_EGG_CACHE=${OPENSHIFT_HOME_DIR}python/virtualenv/venv/lib/python3.5/site-packages
