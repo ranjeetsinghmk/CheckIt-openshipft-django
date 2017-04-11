@@ -4,4 +4,4 @@ RewriteRule ^application/media/(.+)$ /media/$1 [L]
 RewriteEngine On
 RewriteRule ^application/static/(.+)$ /static/$1 [L]
 
-Header set Access-Control-Allow-Origin "*"
+#Header set Access-Control-Allow-Origin "*"
