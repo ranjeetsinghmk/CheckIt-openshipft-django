@@ -4,3 +4,4 @@ djangorestframework
 pygments
 django-filter
 django-cors-headers
+Pillow
