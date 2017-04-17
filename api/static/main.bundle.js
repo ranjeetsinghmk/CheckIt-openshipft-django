@@ -38,7 +38,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var UserService = (function () {
     function UserService(http) {
         this.http = http;
-        this.base = "http://127.0.0.1:8000";
+        this.base = ""; //environment.production ? "" : "http://127.0.0.1:8000";
     }
     UserService.prototype.authenticate = function (user) {
         return this.http.post(this.base + '/api-token-auth/', user).map(function (response) { return response.json(); });
@@ -1062,7 +1062,7 @@ var UpdatesService = (function () {
         this.http = http;
         this.CREATIVE_TOP_MESSAGE_KEY = "creative_top_messages";
         this.MENUS_KEY = "menus";
-        this.base = "http://127.0.0.1:8000";
+        this.base = ""; //environment.production ? "" : "http://127.0.0.1:8000";
         localStorage.setItem(this.CREATIVE_TOP_MESSAGE_KEY, "\n        [\n            \"<font size='2' color='blue' >Welcome to CheckIt</font>\",\n            \"<font size='2' color='blue' >We are together creative</font>\",\n            \"<font size='2' color='blue' >Explore explore explore and explore</font>\"\n        ]\n        ");
         localStorage.setItem(this.MENUS_KEY, "\n        [\n            {\n                \"id\": \"m1\",\n                \"title\": \"CheckIt\",\n                \"photo\": \"./static/updates/assets/img/icon-games.png\",\n                \"desc\": \"Beautiful game for all. concentrate on it.\",\n                \"links\": [\n                    {\n                        \"name\": \"Amazon Apps store\",\n                        \"icon\": \"https://cdn1.iconfinder.com/data/icons/app-stores-2/512/amazon_app_store_2.png\",\n                        \"target\": \"https://www.amazon.com/rjsdtr-CheckIt/dp/B01604BGAC/\"\n                    }\n                ]\n            },\n            {\n                \"id\": \"m2\",\n                \"title\": \"Business\",\n                \"photo\": \"http://www.planwallpaper.com/static/images/offset_WaterHouseMarineImages_62652-2-660x440.jpg\",\n                \"desc\": \"We provide platform for your business plan. Here you can design evething in no time with our creative UI.\"\n                \"links\":[\n                    {\n                        \"name\": \"\"\n                    }\n                ]\n            }, \n            {\n                \"id\": \"m3\",\n                \"title\": \"Explore\",\n                \"photo\":\"http://www.planwallpaper.com/static/images/9-credit-1.jpg\",\n                \"desc\": \"What is going on?? search for everything on a single platform. find the nice places in this World.\"\n            },\n            {\n                \"id\": \"m4\",\n                \"title\": \"Prove yourself\",\n                \"photo\": \"http://www.dam7.com/Images/Puppy/images/myspace-puppy-images-0005.jpg\",\n                \"desc\": \"Create a funtastic resume with a template of your choice FREE.\"\n            },\n            {\n                \"id\": \"m5\",\n                \"title\": \"Extra\",\n                \"photo\": \"http://i.dailymail.co.uk/i/pix/2016/11/02/15/39FD647300000578-0-image-a-15_1478101071773.jpg\",\n                \"desc\": \"Know what are we here for? write us and much more things.\"\n            }\n            ]\n        ");
     }

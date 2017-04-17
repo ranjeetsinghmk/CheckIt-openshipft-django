@@ -65,7 +65,7 @@ export class UpdatesService {
 
     }
 
-    base = environment.production ? "" : "http://127.0.0.1:8000";
+    base = ""  //environment.production ? "" : "http://127.0.0.1:8000";
     getUpdatesMenuItems(): Observable<any> {
         // let data = JSON.parse(localStorage.getItem(this.MENUS_KEY));
         // let maxDesc = 0;
