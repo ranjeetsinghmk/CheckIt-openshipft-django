@@ -20,15 +20,27 @@ export class UpdatesService {
         [
             {
                 "id": "m1",
-                "title": "Products",
-                "photo": "http://www.planwallpaper.com/static/images/canberra_hero_image_JiMVvYU.jpg",
-                "desc": "Explore our beautiful products. Experience great functions & UI with less efferts"
+                "title": "CheckIt",
+                "photo": "./static/updates/assets/img/icon-games.png",
+                "desc": "Beautiful game for all. concentrate on it.",
+                "links": [
+                    {
+                        "name": "Amazon Apps store",
+                        "icon": "https://cdn1.iconfinder.com/data/icons/app-stores-2/512/amazon_app_store_2.png",
+                        "target": "https://www.amazon.com/rjsdtr-CheckIt/dp/B01604BGAC/"
+                    }
+                ]
             },
             {
                 "id": "m2",
                 "title": "Business",
                 "photo": "http://www.planwallpaper.com/static/images/offset_WaterHouseMarineImages_62652-2-660x440.jpg",
                 "desc": "We provide platform for your business plan. Here you can design evething in no time with our creative UI."
+                "links":[
+                    {
+                        "name": ""
+                    }
+                ]
             }, 
             {
                 "id": "m3",

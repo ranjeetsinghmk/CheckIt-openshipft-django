@@ -226,9 +226,53 @@ md-card-content pre {
 }
 
 .fixed { height:275px; }
+.menu-item-description{
+  opacity: 0;
+  color:white;
+  padding:5px;
+  font-size:12px;
+}
 
-.menu:hover div{
+.menu > .menuitem{
+  cursor:pointer; 
+  width:200px;
+  height:200px; 
+  background-size:cover;
+  background-color:black;
+}
+
+.menu > .menuitem:hover .menu-item-description{
   background-color: black;
-  opacity: 0.6;
-  transition: background-color 0.5s linear
+  opacity: 0.7;
+  transition: background-color 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+
+.menu > .menuitem:hover .menu-item-links{
+  height: auto;
+  transform: height 2 linear;
+}
+
+.menu-item-links{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 0px;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.menu-item-links > li{
+  float: left;
+}
+.menu-item-links > li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.menu-item-links > li a:hover {
+    background-color: #111111;
 }

@@ -13,13 +13,15 @@ router.register(r'groups', views.GroupViewSet)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     url(r'^api/members/', include('members.urls')),
+    url(r'^api/products/', include('products.urls')),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api-token-auth/', obtain_auth_token),
     url(r'^admin/', admin.site.urls)
 ]
 
-
+urlpatterns.append(url(r'^(?!ng/).*$', AngularApp.as_view(), name='angular_app'))
+print(settings.DEBUG)
 if not settings.DEBUG:
     from django.views.static import serve
     urlpatterns += [
@@ -29,4 +31,3 @@ if not settings.DEBUG:
             {'document_root': settings.MEDIA_ROOT})
     ]  # if debug mode is False
 
-urlpatterns.append(url(r'^(?!ng/).*$', AngularApp.as_view(), name='angular_app'))

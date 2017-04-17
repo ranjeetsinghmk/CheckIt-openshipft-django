@@ -23,14 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5c$@^*mf=bj-qik6)m2ea-#ser@)016y#syl67k%1i$z+6&r_g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = not os.environ.get('OPENSHIFT_HOMEDIR')
+DEBUG = False   #not os.environ.get('OPENSHIFT_HOMEDIR')
 
 ALLOWED_HOSTS = ['api-checkitsols.rhcloud.com']
-
-ALLOWED_HOSTS.append('127.0.0.1:8000')
-
-ALLOWED_HOSTS.append('127.0.0.1')
-ALLOWED_HOSTS.append('localhost')
+if DEBUG:
+    ALLOWED_HOSTS.append('127.0.0.1:8000')
 
 # Application definition
 
@@ -45,7 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    'members.apps.MembersConfig'
+    'members.apps.MembersConfig',
+    'products.apps.ProductsConfig'
 ]
 
 MIDDLEWARE = [
@@ -160,14 +158,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "api", "static"),
     os.path.join(BASE_DIR, 'ngApp', 'dist'),
     os.path.join(BASE_DIR, 'ngApp', 'dist', 'static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
-print(STATIC_ROOT)
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")

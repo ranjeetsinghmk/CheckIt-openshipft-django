@@ -330,7 +330,7 @@ exports = module.exports = __webpack_require__(66)();
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\nbody{\r\n    background: #fffeee;\r\n    margin: 0px auto;\r\n}\r\n\r\n.take-rest-space{\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1 1 auto;\r\n            flex: 1 1 auto;\r\n}\r\n\r\nfooter{\r\n    min-height: 200px;\r\n    width: 100%;\r\n    margin: 0px auto;\r\n    background: #444;\r\n}\r\n\r\nfooter .footer-social-buttons ul{\r\n    list-style: none;\r\n}\r\nfooter .footer-social-buttons ul li{\r\n    display: -webkit-inline-box;\r\n    display: -ms-inline-flexbox;\r\n    display: inline-flex;\r\n}\r\nfooter .footer-social-buttons ul li a{\r\n    font-style: normal;\r\n}", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\nbody{\r\n    background: #fffeee;\r\n    margin: 0px auto;\r\n}\r\n\r\n.take-rest-space{\r\n    -webkit-box-flex: 1;\r\n        -ms-flex: 1 1 auto;\r\n            flex: 1 1 auto;\r\n}\r\n\r\nfooter{\r\n    min-height: 200px;\r\n    width: 100%;\r\n    margin: 0px auto;\r\n    margin-top: 10px;\r\n    background: #444;\r\n}\r\n\r\nfooter .footer-social-buttons ul{\r\n    list-style: none;\r\n}\r\nfooter .footer-social-buttons ul li{\r\n    display: -webkit-inline-box;\r\n    display: -ms-inline-flexbox;\r\n    display: inline-flex;\r\n}\r\nfooter .footer-social-buttons ul li a{\r\n    font-style: normal;\r\n}", ""]);
 
 // exports
 

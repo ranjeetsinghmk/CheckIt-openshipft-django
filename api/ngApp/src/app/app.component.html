@@ -1,6 +1,6 @@
 <md-toolbar [color]="primary" class="mat-elevation-z3" style.xs="min-height:150px;">
-    <div fxLayout="row" style="margin:0px;width:100%;text-align: center;" fxLayoutAlign="start" style.xs="width:300px"
-        fxLayoutGap.xs="0px" fxLayoutAlign.xs="stretch" fxLayout.xs="column">
+    <div fxLayout="row" style="margin:0px;width:100%;text-align: center;" fxLayoutAlign="start" style.xs="width:300px" fxLayoutGap.xs="0px"
+        fxLayoutAlign.xs="stretch" fxLayout.xs="column">
         <img src="{{icon}}" [routerLink]="['/']" style="cursor:pointer;" height="70" width="70" />
         <span fxFlex></span>
         <div style="text-align: center;margin: 0px;" fxFlex="50" [innerHtml]="creativeBlock"></div>
@@ -19,7 +19,7 @@
 </button>-->
 <router-outlet></router-outlet>
 <footer>
-    <a md-button color="primary" href="http://profile-dtr.rhcloud.com/">Main Site</a>
+    <a md-button color="primary" href="/">Home</a>
     <button md-mini-fab (click)="window.open('http://profile-dtr.rhcloud.com')">
             <md-icon class="md-24">web</md-icon>
     </button>
