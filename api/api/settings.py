@@ -30,7 +30,6 @@ if DEBUG:
     ALLOWED_HOSTS.append('127.0.0.1')
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -185,8 +184,8 @@ ADMIN_LOGIN = 'ranjeet@checkit.com'
 ADMIN_PASSWORD = 'rjsdtr123'
 
 GET_USER_DETAILS_END_POINT = 'get_my_details'
-
-CORS_ORIGIN_WHITELIST = (
-    '127.0.0.1:4200',
-    'localhost:4200'
-)
+if DEBUG
+    CORS_ORIGIN_WHITELIST = (
+        '127.0.0.1:4200',
+        'localhost:4200'
+    )

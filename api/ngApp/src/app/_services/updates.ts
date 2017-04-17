@@ -3,7 +3,7 @@ import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from "rxjs";
 import 'rxjs/add/operator/map'
-
+import { environment } from '../../environments/environment';
 @Injectable()
 export class UpdatesService {
     private CREATIVE_TOP_MESSAGE_KEY = "creative_top_messages";
@@ -65,7 +65,7 @@ export class UpdatesService {
 
     }
 
-    base = "http://127.0.0.1:8000";
+    base = environment.production ? "" : "http://127.0.0.1:8000";
     getUpdatesMenuItems(): Observable<any> {
         // let data = JSON.parse(localStorage.getItem(this.MENUS_KEY));
         // let maxDesc = 0;

@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
-
+import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from "rxjs";
 import { User } from '../_models/index';
 
 @Injectable()
 export class UserService {
-    base = "http://127.0.0.1:8000";
+    base = environment.production ? "" : "http://127.0.0.1:8000";
     constructor(private http: Http) { }
 
     authenticate(user: User) {
