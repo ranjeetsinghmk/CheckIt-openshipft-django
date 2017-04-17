@@ -20,9 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls)
 ]
 
-urlpatterns.append(url(r'^(?!ng/).*$', AngularApp.as_view(), name='angular_app'))
-print(settings.DEBUG)
-# if not settings.DEBUG:
 from django.views.static import serve
 urlpatterns += [
     url(r'^static/(?P<path>.*)$', serve,
@@ -31,3 +28,4 @@ urlpatterns += [
         {'document_root': settings.MEDIA_ROOT})
 ]  # if debug mode is False
 
+urlpatterns.append(url(r'^(?!ng/).*$', AngularApp.as_view(), name='angular_app'))

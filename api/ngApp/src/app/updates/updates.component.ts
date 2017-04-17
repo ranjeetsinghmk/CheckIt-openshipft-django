@@ -20,6 +20,14 @@ export class UpdatesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.menus = this.updatesService.getUpdatesMenuItems();
+    this.updatesService.getUpdatesMenuItems().subscribe(
+      data => this.menus = data,
+      err => {
+        console.error(err);
+      },
+      () => {
+        console.log("Fetch done");
+      }
+    );
   }
 }

@@ -5,48 +5,40 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 0001_initial.py	../api/members/migrations/0001_initial.py	1;"	kind:file	line:1
-0002_auto_20161119_1840.py	../api/members/migrations/0002_auto_20161119_1840.py	1;"	kind:file	line:1
-0003_auto_20161119_1954.py	../api/members/migrations/0003_auto_20161119_1954.py	1;"	kind:file	line:1
-0004_auto_20161119_1958.py	../api/members/migrations/0004_auto_20161119_1958.py	1;"	kind:file	line:1
-0005_auto_20161119_2009.py	../api/members/migrations/0005_auto_20161119_2009.py	1;"	kind:file	line:1
-0006_auto_20161119_2013.py	../api/members/migrations/0006_auto_20161119_2013.py	1;"	kind:file	line:1
-0007_auto_20161119_2037.py	../api/members/migrations/0007_auto_20161119_2037.py	1;"	kind:file	line:1
-0008_auto_20161120_1104.py	../api/members/migrations/0008_auto_20161120_1104.py	1;"	kind:file	line:1
-0009_auto_20161124_1944.py	../api/members/migrations/0009_auto_20161124_1944.py	1;"	kind:file	line:1
-0009_auto_20161203_1310.py	../api/members/migrations/0009_auto_20161203_1310.py	1;"	kind:file	line:1
-0010_auto_20161124_1948.py	../api/members/migrations/0010_auto_20161124_1948.py	1;"	kind:file	line:1
-0011_auto_20161126_1814.py	../api/members/migrations/0011_auto_20161126_1814.py	1;"	kind:file	line:1
-0012_auto_20161126_2105.py	../api/members/migrations/0012_auto_20161126_2105.py	1;"	kind:file	line:1
-0013_merge_20161203_1350.py	../api/members/migrations/0013_merge_20161203_1350.py	1;"	kind:file	line:1
-ADMIN_LOGIN	../api/api/settings.py	/^ADMIN_LOGIN = 'ranjeet@checkit.com'$/;"	kind:variable	line:183
-ADMIN_PASSWORD	../api/api/settings.py	/^ADMIN_PASSWORD = 'rjsdtr123'$/;"	kind:variable	line:184
-ALLOWED_HOSTS	../api/api/settings.py	/^ALLOWED_HOSTS = ['api-checkitsols.rhcloud.com']$/;"	kind:variable	line:29
-ANGULAR_ROOT	../api/api/settings.py	/^ANGULAR_ROOT = os.path.join(BASE_DIR, 'ngApp\/')$/;"	kind:variable	line:187
-ANGULAR_URL	../api/api/settings.py	/^ANGULAR_URL = '\/app\/'$/;"	kind:variable	line:186
-AUTH_PASSWORD_VALIDATORS	../api/api/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:125
+0001_initial.py	../api/products/migrations/0001_initial.py	1;"	kind:file	line:1
+ADMIN_LOGIN	../api/api/settings.py	/^ADMIN_LOGIN = 'ranjeet@checkit.com'$/;"	kind:variable	line:184
+ADMIN_PASSWORD	../api/api/settings.py	/^ADMIN_PASSWORD = 'rjsdtr123'$/;"	kind:variable	line:185
+ALLOWED_HOSTS	../api/api/settings.py	/^ALLOWED_HOSTS = ['api-checkitsols.rhcloud.com']$/;"	kind:variable	line:28
+AUTH_PASSWORD_VALIDATORS	../api/api/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:127
 AllowAny	../api/auth/permissions.py	/^class AllowAny(permissions.AllowAny):$/;"	kind:class	line:4
 AngularApp	../api/api/views.py	/^class AngularApp(TemplateView):$/;"	kind:class	line:51
 BASE_DIR	../api/api/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
-CORS_ORIGIN_WHITELIST	../api/api/settings.py	/^CORS_ORIGIN_WHITELIST = ($/;"	kind:variable	line:190
+CORS_ORIGIN_WHITELIST	../api/api/settings.py	/^CORS_ORIGIN_WHITELIST = ($/;"	kind:variable	line:189
 Country	../api/members/models.py	/^class Country(models.Model):$/;"	kind:class	line:8
 CountrySerializer	../api/members/serializers.py	/^class CountrySerializer(serializers.Serializer):$/;"	kind:class	line:5
 CountryViewSet	../api/members/views.py	/^class CountryViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:73
-DATABASES	../api/api/settings.py	/^    DATABASES = {$/;"	kind:variable	line:104
-DATABASES	../api/api/settings.py	/^    DATABASES = {$/;"	kind:variable	line:114
-DATABASE_NAME	../api/api/settings.py	/^DATABASE_NAME = 'checkit'$/;"	kind:variable	line:87
+DATABASES	../api/api/settings.py	/^    DATABASES = {$/;"	kind:variable	line:106
+DATABASES	../api/api/settings.py	/^    DATABASES = {$/;"	kind:variable	line:116
+DATABASE_NAME	../api/api/settings.py	/^DATABASE_NAME = 'checkit'$/;"	kind:variable	line:89
 DEBUG	../api/api/settings.py	/^DEBUG = not os.environ.get('OPENSHIFT_HOMEDIR')$/;"	kind:variable	line:26
-GET_USER_DETAILS_END_POINT	../api/api/settings.py	/^GET_USER_DETAILS_END_POINT = 'get_my_details'$/;"	kind:variable	line:188
+GET_USER_DETAILS_END_POINT	../api/api/settings.py	/^GET_USER_DETAILS_END_POINT = 'get_my_details'$/;"	kind:variable	line:187
 GroupSerializer	../api/api/serializers.py	/^class GroupSerializer(serializers.HyperlinkedModelSerializer):$/;"	kind:class	line:37
 GroupViewSet	../api/api/views.py	/^class GroupViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:40
 INSTALLED_APPS	../api/api/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:36
 IsAdminOrReadOnly	../api/auth/permissions.py	/^class IsAdminOrReadOnly(permissions.BasePermission):$/;"	kind:class	line:12
 IsAuthenticated	../api/auth/permissions.py	/^class IsAuthenticated(permissions.IsAuthenticated):$/;"	kind:class	line:8
 IsAuthenticatedOrReadOrCreateUser	../api/auth/permissions.py	/^class IsAuthenticatedOrReadOrCreateUser(permissions.BasePermission):$/;"	kind:class	line:20
-LANGUAGE_CODE	../api/api/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	kind:variable	line:144
-MEDIA_ROOT	../api/api/settings.py	/^MEDIA_ROOT = os.path.join(BASE_DIR, "media")$/;"	kind:variable	line:170
-MEDIA_URL	../api/api/settings.py	/^MEDIA_URL = '\/media\/'$/;"	kind:variable	line:168
-MIDDLEWARE	../api/api/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:49
+LANGUAGE_CODE	../api/api/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	kind:variable	line:146
+Link	../api/products/models.py	/^class Link(models.Model):$/;"	kind:class	line:30
+LinkSerializer	../api/products/serializers.py	/^class LinkSerializer(serializers.ModelSerializer):$/;"	kind:class	line:5
+LinkViewSet	../api/products/views.py	/^class LinkViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:14
+MEDIA_ROOT	../api/api/settings.py	/^MEDIA_ROOT = os.path.join(BASE_DIR, "media")$/;"	kind:variable	line:171
+MEDIA_URL	../api/api/settings.py	/^MEDIA_URL = '\/media\/'$/;"	kind:variable	line:169
+MIDDLEWARE	../api/api/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:51
 MembersConfig	../api/members/apps.py	/^class MembersConfig(AppConfig):$/;"	kind:class	line:4
+Menu	../api/products/models.py	/^class Menu(models.Model):$/;"	kind:class	line:21
+MenuSerializer	../api/products/serializers.py	/^class MenuSerializer(serializers.ModelSerializer):$/;"	kind:class	line:12
+MenuViewSet	../api/products/views.py	/^class MenuViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:8
 Meta	../api/api/serializers.py	/^    class Meta:$/;"	kind:class	line:39
 Meta	../api/api/serializers.py	/^    class Meta:$/;"	kind:class	line:7
 Meta	../api/members/models.py	/^    class Meta:$/;"	kind:class	line:36
@@ -56,20 +48,11 @@ Meta	../api/members/serializers.py	/^    class Meta:$/;"	kind:class	line:22
 Meta	../api/members/serializers.py	/^    class Meta:$/;"	kind:class	line:29
 Meta	../api/members/serializers.py	/^    class Meta:$/;"	kind:class	line:37
 Meta	../api/members/serializers.py	/^    class Meta:$/;"	kind:class	line:52
+Meta	../api/products/serializers.py	/^    class Meta:$/;"	kind:class	line:15
+Meta	../api/products/serializers.py	/^    class Meta:$/;"	kind:class	line:7
 Migration	../api/members/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:10
-Migration	../api/members/migrations/0002_auto_20161119_1840.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Migration	../api/members/migrations/0003_auto_20161119_1954.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Migration	../api/members/migrations/0004_auto_20161119_1958.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Migration	../api/members/migrations/0005_auto_20161119_2009.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Migration	../api/members/migrations/0006_auto_20161119_2013.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Migration	../api/members/migrations/0007_auto_20161119_2037.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Migration	../api/members/migrations/0008_auto_20161120_1104.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Migration	../api/members/migrations/0009_auto_20161124_1944.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Migration	../api/members/migrations/0009_auto_20161203_1310.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Migration	../api/members/migrations/0010_auto_20161124_1948.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Migration	../api/members/migrations/0011_auto_20161126_1814.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Migration	../api/members/migrations/0012_auto_20161126_2105.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-Migration	../api/members/migrations/0013_merge_20161203_1350.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
+Migration	../api/products/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:10
+ProductsConfig	../api/products/apps.py	/^class ProductsConfig(AppConfig):$/;"	kind:class	line:4
 Profile	../api/members/models.py	/^class Profile(models.Model):$/;"	kind:class	line:16
 ProfileSerializer	../api/members/serializers.py	/^class ProfileSerializer(serializers.ModelSerializer):$/;"	kind:class	line:27
 ProfileViewSet	../api/members/views.py	/^class ProfileViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:79
@@ -78,42 +61,48 @@ ProjectSerializer	../api/members/serializers.py	/^class ProjectSerializer(serial
 ProjectViewSet	../api/members/views.py	/^class ProjectViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:111
 REQUIRED_FIELDS	../api/members/models.py	/^    REQUIRED_FIELDS = ['name']$/;"	kind:variable	line:31
 REQUIRED_FIELDS	../api/members/models.py	/^    REQUIRED_FIELDS = ['skill', 'skill_category']$/;"	kind:variable	line:56
-REST_FRAMEWORK	../api/api/settings.py	/^REST_FRAMEWORK = {$/;"	kind:variable	line:172
-ROOT_URLCONF	../api/api/settings.py	/^ROOT_URLCONF = 'api.urls'$/;"	kind:variable	line:61
-STATICFILES_DIRS	../api/api/settings.py	/^STATICFILES_DIRS = [$/;"	kind:variable	line:160
-STATIC_ROOT	../api/api/settings.py	/^STATIC_ROOT = os.path.join(BASE_DIR, "static")$/;"	kind:variable	line:166
-STATIC_URL	../api/api/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:158
+REST_FRAMEWORK	../api/api/settings.py	/^REST_FRAMEWORK = {$/;"	kind:variable	line:173
+ROOT_URLCONF	../api/api/settings.py	/^ROOT_URLCONF = 'api.urls'$/;"	kind:variable	line:63
+STATICFILES_DIRS	../api/api/settings.py	/^STATICFILES_DIRS = [$/;"	kind:variable	line:162
+STATIC_ROOT	../api/api/settings.py	/^STATIC_ROOT = os.path.join(BASE_DIR, "static")$/;"	kind:variable	line:167
+STATIC_URL	../api/api/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:160
 Skill	../api/members/models.py	/^class Skill(models.Model):$/;"	kind:class	line:51
 SkillCategory	../api/members/models.py	/^class SkillCategory(models.Model):$/;"	kind:class	line:40
 SkillCategorySerializer	../api/members/serializers.py	/^class SkillCategorySerializer(serializers.ModelSerializer):$/;"	kind:class	line:20
 SkillCategoryViewSet	../api/members/views.py	/^class SkillCategoryViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:67
 SkillSerializer	../api/members/serializers.py	/^class SkillSerializer(serializers.ModelSerializer):$/;"	kind:class	line:35
 SkillViewSet	../api/members/views.py	/^class SkillViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:95
-TEMPLATES	../api/api/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:63
-TIME_ZONE	../api/api/settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:146
-USE_I18N	../api/api/settings.py	/^USE_I18N = True$/;"	kind:variable	line:148
-USE_L10N	../api/api/settings.py	/^USE_L10N = True$/;"	kind:variable	line:150
-USE_TZ	../api/api/settings.py	/^USE_TZ = True$/;"	kind:variable	line:152
+TEMPLATES	../api/api/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:65
+TIME_ZONE	../api/api/settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:148
+USE_I18N	../api/api/settings.py	/^USE_I18N = True$/;"	kind:variable	line:150
+USE_L10N	../api/api/settings.py	/^USE_L10N = True$/;"	kind:variable	line:152
+USE_TZ	../api/api/settings.py	/^USE_TZ = True$/;"	kind:variable	line:154
 UserSerializer	../api/api/serializers.py	/^class UserSerializer(serializers.HyperlinkedModelSerializer):$/;"	kind:class	line:5
 UserViewSet	../api/api/views.py	/^class UserViewSet(viewsets.ModelViewSet):$/;"	kind:class	line:12
-WSGI_APPLICATION	../api/api/settings.py	/^WSGI_APPLICATION = 'api.wsgi.application'$/;"	kind:variable	line:82
+WSGI_APPLICATION	../api/api/settings.py	/^WSGI_APPLICATION = 'api.wsgi.application'$/;"	kind:variable	line:84
 __init__.py	../api/api/__init__.py	1;"	kind:file	line:1
 __init__.py	../api/auth/__init__.py	1;"	kind:file	line:1
 __init__.py	../api/members/__init__.py	1;"	kind:file	line:1
 __init__.py	../api/members/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	../api/products/__init__.py	1;"	kind:file	line:1
+__init__.py	../api/products/migrations/__init__.py	1;"	kind:file	line:1
 __str__	../api/members/models.py	/^    def __str__(self):$/;"	kind:member	line:12
 __str__	../api/members/models.py	/^    def __str__(self):$/;"	kind:member	line:33
 __str__	../api/members/models.py	/^    def __str__(self):$/;"	kind:member	line:44
 __str__	../api/members/models.py	/^    def __str__(self):$/;"	kind:member	line:58
 __str__	../api/members/models.py	/^    def __str__(self):$/;"	kind:member	line:76
+__str__	../api/products/models.py	/^    def __str__(self):$/;"	kind:member	line:26
+__str__	../api/products/models.py	/^    def __str__(self):$/;"	kind:member	line:37
 about	../api/members/models.py	/^    about = models.TextField()$/;"	kind:variable	line:30
 about	../api/members/models.py	/^    about = models.TextField()$/;"	kind:variable	line:72
 admin.py	../api/api/admin.py	1;"	kind:file	line:1
 admin.py	../api/members/admin.py	1;"	kind:file	line:1
+admin.py	../api/products/admin.py	1;"	kind:file	line:1
 aim	../api/members/models.py	/^    aim = models.CharField('Your ambition', max_length=200)$/;"	kind:variable	line:24
 application	../api/api/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
 application	../wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:19
 apps.py	../api/members/apps.py	1;"	kind:file	line:1
+apps.py	../api/products/apps.py	1;"	kind:file	line:1
 author	../setup.py	/^      author='Ranjeet Singh',$/;"	kind:variable	line:9
 author_email	../setup.py	/^      author_email='sranjeet748@gmail.com',$/;"	kind:variable	line:10
 category	../api/members/models.py	/^    category = models.CharField('Skill Category', max_length=50, unique=True)$/;"	kind:variable	line:41
@@ -127,41 +116,16 @@ create	../api/api/serializers.py	/^    def create(self, validated_data):$/;"	kin
 create	../api/members/serializers.py	/^    def create(self, validated_data):$/;"	kind:member	line:10
 createTokenForAll	../api/api/models.py	/^def createTokenForAll():$/;"	kind:function	line:15
 create_auth_token	../api/api/models.py	/^def create_auth_token(sender, instance=None, created=False, **kwargs):$/;"	kind:function	line:9
-cursor	../api/api/settings.py	/^    cursor = db.cursor()$/;"	kind:variable	line:97
-db	../api/api/settings.py	/^    db = MySQLdb.connect("localhost", "root", "rjsdtr")$/;"	kind:variable	line:94
+cursor	../api/api/settings.py	/^    cursor = db.cursor()$/;"	kind:variable	line:99
+db	../api/api/settings.py	/^    db = MySQLdb.connect("localhost", "root", "rjsdtr")$/;"	kind:variable	line:96
 dependencies	../api/members/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:14
-dependencies	../api/members/migrations/0002_auto_20161119_1840.py	/^    dependencies = [$/;"	kind:variable	line:10
-dependencies	../api/members/migrations/0003_auto_20161119_1954.py	/^    dependencies = [$/;"	kind:variable	line:10
-dependencies	../api/members/migrations/0004_auto_20161119_1958.py	/^    dependencies = [$/;"	kind:variable	line:10
-dependencies	../api/members/migrations/0005_auto_20161119_2009.py	/^    dependencies = [$/;"	kind:variable	line:10
-dependencies	../api/members/migrations/0006_auto_20161119_2013.py	/^    dependencies = [$/;"	kind:variable	line:10
-dependencies	../api/members/migrations/0007_auto_20161119_2037.py	/^    dependencies = [$/;"	kind:variable	line:10
-dependencies	../api/members/migrations/0008_auto_20161120_1104.py	/^    dependencies = [$/;"	kind:variable	line:10
-dependencies	../api/members/migrations/0009_auto_20161124_1944.py	/^    dependencies = [$/;"	kind:variable	line:10
-dependencies	../api/members/migrations/0009_auto_20161203_1310.py	/^    dependencies = [$/;"	kind:variable	line:10
-dependencies	../api/members/migrations/0010_auto_20161124_1948.py	/^    dependencies = [$/;"	kind:variable	line:10
-dependencies	../api/members/migrations/0011_auto_20161126_1814.py	/^    dependencies = [$/;"	kind:variable	line:10
-dependencies	../api/members/migrations/0012_auto_20161126_2105.py	/^    dependencies = [$/;"	kind:variable	line:10
-dependencies	../api/members/migrations/0013_merge_20161203_1350.py	/^    dependencies = [$/;"	kind:variable	line:10
+dependencies	../api/products/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:14
+desc	../api/products/models.py	/^    desc = models.TextField()$/;"	kind:variable	line:23
 description	../setup.py	/^      description='CheckIt universal APIs',$/;"	kind:variable	line:8
 end_date	../api/members/models.py	/^    end_date = models.DateField(null=True, blank=True)$/;"	kind:variable	line:70
 extra_kwargs	../api/api/serializers.py	/^        extra_kwargs = {$/;"	kind:variable	line:11
 field	../api/members/migrations/0001_initial.py	/^            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='members.SkillCategory'),$/;"	kind:variable	line:88
-field	../api/members/migrations/0002_auto_20161119_1840.py	/^            field=models.CharField(max_length=50),$/;"	kind:variable	line:18
-field	../api/members/migrations/0002_auto_20161119_1840.py	/^            field=models.IntegerField(),$/;"	kind:variable	line:23
-field	../api/members/migrations/0003_auto_20161119_1954.py	/^            field=models.CharField(max_length=50, unique=True),$/;"	kind:variable	line:18
-field	../api/members/migrations/0004_auto_20161119_1958.py	/^            field=models.CharField(max_length=50, unique=True),$/;"	kind:variable	line:18
-field	../api/members/migrations/0004_auto_20161119_1958.py	/^            field=models.CharField(max_length=50, unique=True, verbose_name='Skill Category'),$/;"	kind:variable	line:23
-field	../api/members/migrations/0005_auto_20161119_2009.py	/^            field=models.ManyToManyField(to='members.Profile'),$/;"	kind:variable	line:22
-field	../api/members/migrations/0007_auto_20161119_2037.py	/^            field=models.FileField(default=None, upload_to='profile\/cv\/%Y\/%m\/%d'),$/;"	kind:variable	line:18
-field	../api/members/migrations/0009_auto_20161124_1944.py	/^            field=models.CharField(max_length=100),$/;"	kind:variable	line:18
-field	../api/members/migrations/0009_auto_20161124_1944.py	/^            field=models.IntegerField(default=0),$/;"	kind:variable	line:28
-field	../api/members/migrations/0009_auto_20161124_1944.py	/^            field=models.ManyToManyField(default=None, to='members.Profile'),$/;"	kind:variable	line:23
-field	../api/members/migrations/0009_auto_20161203_1310.py	/^            field=models.CharField(max_length=100),$/;"	kind:variable	line:18
-field	../api/members/migrations/0010_auto_20161124_1948.py	/^            field=models.ManyToManyField(to='members.Profile'),$/;"	kind:variable	line:18
-field	../api/members/migrations/0011_auto_20161126_1814.py	/^            field=models.FileField(blank=True, default=None, upload_to='profile\/projects\/certificates\/%Y\/%m\/%d'),$/;"	kind:variable	line:18
-field	../api/members/migrations/0011_auto_20161126_1814.py	/^            field=models.ManyToManyField(blank=True, to='members.Profile'),$/;"	kind:variable	line:23
-field	../api/members/migrations/0012_auto_20161126_2105.py	/^            field=models.CharField(max_length=50),$/;"	kind:variable	line:18
+field	../api/products/migrations/0001_initial.py	/^            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='products.Menu'),$/;"	kind:variable	line:39
 fields	../api/api/serializers.py	/^        fields = ('id', 'email', 'username', 'password',$/;"	kind:variable	line:9
 fields	../api/api/serializers.py	/^        fields = ('url', 'name')$/;"	kind:variable	line:41
 fields	../api/members/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:21
@@ -173,93 +137,56 @@ fields	../api/members/serializers.py	/^        fields = ('id', 'category', 'rank
 fields	../api/members/serializers.py	/^        fields = ('id', 'profile', 'title', 'start_date',$/;"	kind:variable	line:54
 fields	../api/members/serializers.py	/^        fields = ('id', 'skill', 'skill_category', 'profiles',)$/;"	kind:variable	line:39
 fields	../api/members/serializers.py	/^        fields = ('id', 'user', 'photo', 'firstName', 'lastName',$/;"	kind:variable	line:31
+fields	../api/products/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:20
+fields	../api/products/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:29
+fields	../api/products/serializers.py	/^        fields = ('pk', 'photo', 'title', 'desc', 'links')$/;"	kind:variable	line:17
+fields	../api/products/serializers.py	/^        fields = ('pk', 'title', 'target', 'icon')$/;"	kind:variable	line:9
 filter_backends	../api/api/views.py	/^    filter_backends = (DjangoFilterBackend, filters.SearchFilter)$/;"	kind:variable	line:18
 filter_fields	../api/api/views.py	/^    filter_fields = ('username', 'email',)$/;"	kind:variable	line:19
 firstName	../api/members/models.py	/^    firstName = models.CharField('First Name', max_length=200)$/;"	kind:variable	line:21
 firsttime	../api/members/models.py	/^    firsttime = models.BooleanField(default=True)$/;"	kind:variable	line:20
 followers	../api/members/models.py	/^    followers = models.ManyToManyField(User, blank=True)$/;"	kind:variable	line:29
-get_context_data	../api/api/views.py	/^    def get_context_data(self, **kwargs):$/;"	kind:member	line:54
 has_object_permission	../api/auth/permissions.py	/^    def has_object_permission(self, request, view, obj):$/;"	kind:member	line:29
 has_permission	../api/auth/permissions.py	/^    def has_permission(self, request, view):$/;"	kind:member	line:14
 has_permission	../api/auth/permissions.py	/^    def has_permission(self, request, view):$/;"	kind:member	line:22
+icon	../api/products/models.py	/^    icon = models.ImageField(upload_to=upload_link)$/;"	kind:variable	line:33
 id	../api/members/serializers.py	/^    id = serializers.IntegerField(read_only=True)$/;"	kind:variable	line:6
 initial	../api/members/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:12
+initial	../api/products/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:12
 lastName	../api/members/models.py	/^    lastName = models.CharField('Last Name', max_length=200, null=True)$/;"	kind:variable	line:22
+links	../api/products/serializers.py	/^    links = LinkSerializer(many=True, read_only=True)$/;"	kind:variable	line:13
 location	../api/members/models.py	/^    location = models.CharField(max_length=100)$/;"	kind:variable	line:71
 manage.py	../api/manage.py	1;"	kind:file	line:1
+menu	../api/products/models.py	/^    menu = models.ForeignKey(Menu, related_name="links",$/;"	kind:variable	line:34
 model	../api/api/serializers.py	/^        model = Group$/;"	kind:variable	line:40
 model	../api/api/serializers.py	/^        model = User$/;"	kind:variable	line:8
 model	../api/members/serializers.py	/^        model = Profile$/;"	kind:variable	line:30
 model	../api/members/serializers.py	/^        model = Project$/;"	kind:variable	line:53
 model	../api/members/serializers.py	/^        model = Skill$/;"	kind:variable	line:38
 model	../api/members/serializers.py	/^        model = SkillCategory$/;"	kind:variable	line:23
+model	../api/products/serializers.py	/^        model = Link$/;"	kind:variable	line:8
+model	../api/products/serializers.py	/^        model = Menu$/;"	kind:variable	line:16
 model_name	../api/members/migrations/0001_initial.py	/^            model_name='skill',$/;"	kind:variable	line:86
-model_name	../api/members/migrations/0002_auto_20161119_1840.py	/^            model_name='country',$/;"	kind:variable	line:16
-model_name	../api/members/migrations/0002_auto_20161119_1840.py	/^            model_name='country',$/;"	kind:variable	line:21
-model_name	../api/members/migrations/0003_auto_20161119_1954.py	/^            model_name='country',$/;"	kind:variable	line:16
-model_name	../api/members/migrations/0004_auto_20161119_1958.py	/^            model_name='skill',$/;"	kind:variable	line:16
-model_name	../api/members/migrations/0004_auto_20161119_1958.py	/^            model_name='skillcategory',$/;"	kind:variable	line:21
-model_name	../api/members/migrations/0005_auto_20161119_2009.py	/^            model_name='project',$/;"	kind:variable	line:16
-model_name	../api/members/migrations/0005_auto_20161119_2009.py	/^            model_name='project',$/;"	kind:variable	line:20
-model_name	../api/members/migrations/0006_auto_20161119_2013.py	/^            model_name='profile',$/;"	kind:variable	line:16
-model_name	../api/members/migrations/0007_auto_20161119_2037.py	/^            model_name='profile',$/;"	kind:variable	line:16
-model_name	../api/members/migrations/0008_auto_20161120_1104.py	/^            model_name='project',$/;"	kind:variable	line:16
-model_name	../api/members/migrations/0008_auto_20161120_1104.py	/^            model_name='project',$/;"	kind:variable	line:21
-model_name	../api/members/migrations/0009_auto_20161124_1944.py	/^            model_name='project',$/;"	kind:variable	line:16
-model_name	../api/members/migrations/0009_auto_20161124_1944.py	/^            model_name='skill',$/;"	kind:variable	line:21
-model_name	../api/members/migrations/0009_auto_20161124_1944.py	/^            model_name='skill',$/;"	kind:variable	line:26
-model_name	../api/members/migrations/0009_auto_20161203_1310.py	/^            model_name='project',$/;"	kind:variable	line:16
-model_name	../api/members/migrations/0010_auto_20161124_1948.py	/^            model_name='skill',$/;"	kind:variable	line:16
-model_name	../api/members/migrations/0011_auto_20161126_1814.py	/^            model_name='project',$/;"	kind:variable	line:16
-model_name	../api/members/migrations/0011_auto_20161126_1814.py	/^            model_name='skill',$/;"	kind:variable	line:21
-model_name	../api/members/migrations/0012_auto_20161126_2105.py	/^            model_name='skill',$/;"	kind:variable	line:16
+model_name	../api/products/migrations/0001_initial.py	/^            model_name='link',$/;"	kind:variable	line:37
 models.py	../api/api/models.py	1;"	kind:file	line:1
 models.py	../api/members/models.py	1;"	kind:file	line:1
+models.py	../api/products/models.py	1;"	kind:file	line:1
 name	../api/members/apps.py	/^    name = 'members'$/;"	kind:variable	line:5
 name	../api/members/migrations/0001_initial.py	/^            name='Country',$/;"	kind:variable	line:20
 name	../api/members/migrations/0001_initial.py	/^            name='Profile',$/;"	kind:variable	line:28
 name	../api/members/migrations/0001_initial.py	/^            name='Project',$/;"	kind:variable	line:50
 name	../api/members/migrations/0001_initial.py	/^            name='Skill',$/;"	kind:variable	line:63
 name	../api/members/migrations/0001_initial.py	/^            name='SkillCategory',$/;"	kind:variable	line:75
+name	../api/members/migrations/0001_initial.py	/^            name='skill',$/;"	kind:variable	line:91
 name	../api/members/migrations/0001_initial.py	/^            name='skill_category',$/;"	kind:variable	line:87
-name	../api/members/migrations/0002_auto_20161119_1840.py	/^            name='country',$/;"	kind:variable	line:17
-name	../api/members/migrations/0002_auto_20161119_1840.py	/^            name='tel_code',$/;"	kind:variable	line:22
-name	../api/members/migrations/0003_auto_20161119_1954.py	/^            name='country',$/;"	kind:variable	line:17
-name	../api/members/migrations/0004_auto_20161119_1958.py	/^            name='category',$/;"	kind:variable	line:22
-name	../api/members/migrations/0004_auto_20161119_1958.py	/^            name='skill',$/;"	kind:variable	line:17
-name	../api/members/migrations/0005_auto_20161119_2009.py	/^            name='profile',$/;"	kind:variable	line:17
-name	../api/members/migrations/0005_auto_20161119_2009.py	/^            name='profile',$/;"	kind:variable	line:21
-name	../api/members/migrations/0007_auto_20161119_2037.py	/^            name='resume',$/;"	kind:variable	line:17
-name	../api/members/migrations/0009_auto_20161124_1944.py	/^            name='profiles',$/;"	kind:variable	line:22
-name	../api/members/migrations/0009_auto_20161124_1944.py	/^            name='ranking',$/;"	kind:variable	line:27
-name	../api/members/migrations/0009_auto_20161124_1944.py	/^            name='title',$/;"	kind:variable	line:17
-name	../api/members/migrations/0009_auto_20161203_1310.py	/^            name='title',$/;"	kind:variable	line:17
-name	../api/members/migrations/0010_auto_20161124_1948.py	/^            name='profiles',$/;"	kind:variable	line:17
-name	../api/members/migrations/0011_auto_20161126_1814.py	/^            name='certificate',$/;"	kind:variable	line:17
-name	../api/members/migrations/0011_auto_20161126_1814.py	/^            name='profiles',$/;"	kind:variable	line:22
-name	../api/members/migrations/0012_auto_20161126_2105.py	/^            name='skill',$/;"	kind:variable	line:17
-name	../api/members/migrations/0012_auto_20161126_2105.py	/^            name='skill',$/;"	kind:variable	line:21
-new_name	../api/members/migrations/0006_auto_20161119_2013.py	/^            new_name='about',$/;"	kind:variable	line:18
-new_name	../api/members/migrations/0008_auto_20161120_1104.py	/^            new_name='end_date',$/;"	kind:variable	line:18
-new_name	../api/members/migrations/0008_auto_20161120_1104.py	/^            new_name='start_date',$/;"	kind:variable	line:23
+name	../api/products/apps.py	/^    name = 'products'$/;"	kind:variable	line:5
+name	../api/products/migrations/0001_initial.py	/^            name='Link',$/;"	kind:variable	line:19
+name	../api/products/migrations/0001_initial.py	/^            name='Menu',$/;"	kind:variable	line:28
+name	../api/products/migrations/0001_initial.py	/^            name='menu',$/;"	kind:variable	line:38
 nickname	../api/members/models.py	/^    nickname = models.CharField('Nick name', max_length=200)$/;"	kind:variable	line:23
-old_name	../api/members/migrations/0006_auto_20161119_2013.py	/^            old_name='aboutme',$/;"	kind:variable	line:17
-old_name	../api/members/migrations/0008_auto_20161120_1104.py	/^            old_name='endDate',$/;"	kind:variable	line:17
-old_name	../api/members/migrations/0008_auto_20161120_1104.py	/^            old_name='startDate',$/;"	kind:variable	line:22
+on_delete	../api/products/models.py	/^                             on_delete=models.CASCADE)$/;"	kind:variable	line:35
 operations	../api/members/migrations/0001_initial.py	/^    operations = [$/;"	kind:variable	line:18
-operations	../api/members/migrations/0002_auto_20161119_1840.py	/^    operations = [$/;"	kind:variable	line:14
-operations	../api/members/migrations/0003_auto_20161119_1954.py	/^    operations = [$/;"	kind:variable	line:14
-operations	../api/members/migrations/0004_auto_20161119_1958.py	/^    operations = [$/;"	kind:variable	line:14
-operations	../api/members/migrations/0005_auto_20161119_2009.py	/^    operations = [$/;"	kind:variable	line:14
-operations	../api/members/migrations/0006_auto_20161119_2013.py	/^    operations = [$/;"	kind:variable	line:14
-operations	../api/members/migrations/0007_auto_20161119_2037.py	/^    operations = [$/;"	kind:variable	line:14
-operations	../api/members/migrations/0008_auto_20161120_1104.py	/^    operations = [$/;"	kind:variable	line:14
-operations	../api/members/migrations/0009_auto_20161124_1944.py	/^    operations = [$/;"	kind:variable	line:14
-operations	../api/members/migrations/0009_auto_20161203_1310.py	/^    operations = [$/;"	kind:variable	line:14
-operations	../api/members/migrations/0010_auto_20161124_1948.py	/^    operations = [$/;"	kind:variable	line:14
-operations	../api/members/migrations/0011_auto_20161126_1814.py	/^    operations = [$/;"	kind:variable	line:14
-operations	../api/members/migrations/0012_auto_20161126_2105.py	/^    operations = [$/;"	kind:variable	line:14
-operations	../api/members/migrations/0013_merge_20161203_1350.py	/^    operations = [$/;"	kind:variable	line:15
+operations	../api/products/migrations/0001_initial.py	/^    operations = [$/;"	kind:variable	line:17
 options	../api/members/migrations/0001_initial.py	/^            options={$/;"	kind:variable	line:45
 options	../api/members/migrations/0001_initial.py	/^            options={$/;"	kind:variable	line:70
 options	../api/members/migrations/0001_initial.py	/^            options={$/;"	kind:variable	line:81
@@ -273,8 +200,11 @@ permission_classes	../api/members/views.py	/^    permission_classes = (IsAdminOr
 permission_classes	../api/members/views.py	/^    permission_classes = (IsAdminOrReadOnly,)$/;"	kind:variable	line:70
 permission_classes	../api/members/views.py	/^    permission_classes = (IsAdminOrReadOnly,)$/;"	kind:variable	line:76
 permission_classes	../api/members/views.py	/^    permission_classes = (IsAdminOrReadOnly,)$/;"	kind:variable	line:98
+permission_classes	../api/products/views.py	/^    permission_classes = (IsAdminOrReadOnly,)$/;"	kind:variable	line:11
+permission_classes	../api/products/views.py	/^    permission_classes = (IsAdminOrReadOnly,)$/;"	kind:variable	line:17
 permissions.py	../api/auth/permissions.py	1;"	kind:file	line:1
 photo	../api/members/models.py	/^    photo = models.FileField(upload_to='profile\/pic\/%Y\/%m\/%d', default=None)$/;"	kind:variable	line:19
+photo	../api/products/models.py	/^    photo = models.ImageField(upload_to=scramble_uploaded_filename)$/;"	kind:variable	line:24
 profile	../api/members/models.py	/^    profile = models.ManyToManyField(Profile)$/;"	kind:variable	line:67
 profiles	../api/members/models.py	/^    profiles = models.ManyToManyField(Profile, blank=True)$/;"	kind:variable	line:54
 project_opened	../.ropeproject/config.py	/^def project_opened(project):$/;"	kind:function	line:98
@@ -285,6 +215,8 @@ queryset	../api/members/views.py	/^    queryset = Profile.objects.all()$/;"	kind
 queryset	../api/members/views.py	/^    queryset = Project.objects.all()$/;"	kind:variable	line:112
 queryset	../api/members/views.py	/^    queryset = Skill.objects.all()$/;"	kind:variable	line:96
 queryset	../api/members/views.py	/^    queryset = SkillCategory.objects.all()$/;"	kind:variable	line:68
+queryset	../api/products/views.py	/^    queryset = Link.objects.all()$/;"	kind:variable	line:15
+queryset	../api/products/views.py	/^    queryset = Menu.objects.all()$/;"	kind:variable	line:9
 ranking	../api/members/models.py	/^    ranking = models.IntegerField()$/;"	kind:variable	line:42
 ranking	../api/members/models.py	/^    ranking = models.IntegerField(blank=True, null=True, default=0)$/;"	kind:variable	line:28
 ranking	../api/members/models.py	/^    ranking = models.IntegerField(default=0)$/;"	kind:variable	line:55
@@ -292,8 +224,10 @@ read_only_fields	../api/api/serializers.py	/^        read_only_fields = ('is_sta
 resume	../api/members/models.py	/^    resume = models.FileField(upload_to='profile\/cv\/%Y\/%m\/%d', default=None)$/;"	kind:variable	line:27
 retrieve	../api/api/views.py	/^    def retrieve(self, request, pk=None):$/;"	kind:member	line:23
 retrieve	../api/members/views.py	/^    def retrieve(self, request, *args, **kwargs):$/;"	kind:member	line:84
-router	../api/api/urls.py	/^router = routers.DefaultRouter()$/;"	kind:variable	line:9
+router	../api/api/urls.py	/^router = routers.DefaultRouter()$/;"	kind:variable	line:8
 router	../api/members/urls.py	/^router = DefaultRouter()$/;"	kind:variable	line:17
+router	../api/products/urls.py	/^router = DefaultRouter()$/;"	kind:variable	line:7
+scramble_uploaded_filename	../api/products/models.py	/^def scramble_uploaded_filename(instance, filename):$/;"	kind:function	line:6
 search_fields	../api/api/views.py	/^    search_fields = ('username', 'email',)$/;"	kind:variable	line:20
 serializer_class	../api/api/views.py	/^    serializer_class = GroupSerializer$/;"	kind:variable	line:45
 serializer_class	../api/api/views.py	/^    serializer_class = UserSerializer$/;"	kind:variable	line:17
@@ -302,34 +236,44 @@ serializer_class	../api/members/views.py	/^    serializer_class = ProfileSeriali
 serializer_class	../api/members/views.py	/^    serializer_class = ProjectSerializer$/;"	kind:variable	line:113
 serializer_class	../api/members/views.py	/^    serializer_class = SkillCategorySerializer$/;"	kind:variable	line:69
 serializer_class	../api/members/views.py	/^    serializer_class = SkillSerializer$/;"	kind:variable	line:97
+serializer_class	../api/products/views.py	/^    serializer_class = LinkSerializer$/;"	kind:variable	line:16
+serializer_class	../api/products/views.py	/^    serializer_class = MenuSerializer$/;"	kind:variable	line:10
 serializers.py	../api/api/serializers.py	1;"	kind:file	line:1
 serializers.py	../api/members/serializers.py	1;"	kind:file	line:1
+serializers.py	../api/products/serializers.py	1;"	kind:file	line:1
 set_prefs	../.ropeproject/config.py	/^def set_prefs(prefs):$/;"	kind:function	line:5
 settings.py	../api/api/settings.py	1;"	kind:file	line:1
 setup.py	../setup.py	1;"	kind:file	line:1
 skill	../api/members/models.py	/^    skill = models.CharField(max_length=50)$/;"	kind:variable	line:52
 skill_category	../api/members/models.py	/^    skill_category = models.ForeignKey(SkillCategory)$/;"	kind:variable	line:53
 start_date	../api/members/models.py	/^    start_date = models.DateField()$/;"	kind:variable	line:69
+target	../api/products/models.py	/^    target = models.CharField(max_length=200)$/;"	kind:variable	line:32
 tel_code	../api/members/models.py	/^    tel_code = models.IntegerField()$/;"	kind:variable	line:10
 tel_code	../api/members/serializers.py	/^    tel_code = serializers.IntegerField()$/;"	kind:variable	line:8
 template_name	../api/api/views.py	/^    template_name = 'index.html'$/;"	kind:variable	line:52
 tests.py	../api/members/tests.py	1;"	kind:file	line:1
+tests.py	../api/products/tests.py	1;"	kind:file	line:1
 title	../api/members/models.py	/^    title = models.CharField(max_length=100)$/;"	kind:variable	line:68
-unique_together	../api/members/migrations/0012_auto_20161126_2105.py	/^            unique_together=set([('skill', 'skill_category')]),$/;"	kind:variable	line:22
+title	../api/products/models.py	/^    title = models.CharField(max_length=50)$/;"	kind:variable	line:22
+title	../api/products/models.py	/^    title = models.CharField(max_length=50)$/;"	kind:variable	line:31
+unique_together	../api/members/migrations/0001_initial.py	/^            unique_together=set([('skill', 'skill_category')]),$/;"	kind:variable	line:92
 unique_together	../api/members/models.py	/^        unique_together = ('skill', 'skill_category',)$/;"	kind:variable	line:63
 update	../api/api/serializers.py	/^    def update(self, instance=None, validated_data=None):$/;"	kind:member	line:27
 update	../api/members/serializers.py	/^    def update(self, instance, validated_data):$/;"	kind:member	line:13
+upload_link	../api/products/models.py	/^def upload_link(instance, filename):$/;"	kind:function	line:17
 url	../setup.py	/^      url='http:\/\/www.python.org\/sigs\/distutils-sig\/',$/;"	kind:variable	line:11
-urlpatterns	../api/api/urls.py	/^    static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.ANGULAR_URL, document_root=settings.ANGULAR_ROOT)$/;"	kind:variable	line:26
-urlpatterns	../api/api/urls.py	/^urlpatterns = [$/;"	kind:variable	line:15
+urlpatterns	../api/api/urls.py	/^urlpatterns = [$/;"	kind:variable	line:14
 urlpatterns	../api/members/urls.py	/^urlpatterns = [$/;"	kind:variable	line:24
+urlpatterns	../api/products/urls.py	/^urlpatterns = [url(r'', include(router.urls))]$/;"	kind:variable	line:11
 urls.py	../api/api/urls.py	1;"	kind:file	line:1
 urls.py	../api/members/urls.py	1;"	kind:file	line:1
+urls.py	../api/products/urls.py	1;"	kind:file	line:1
 user	../api/members/models.py	/^    user = models.OneToOneField($/;"	kind:variable	line:17
 validate	../api/members/serializers.py	/^    def validate(self, data):$/;"	kind:member	line:44
 version	../setup.py	/^      version='1.0.0',$/;"	kind:variable	line:7
 views.py	../api/api/views.py	1;"	kind:file	line:1
 views.py	../api/members/views.py	1;"	kind:file	line:1
+views.py	../api/products/views.py	1;"	kind:file	line:1
 virtenv	../wsgi.py	/^virtenv = os.environ['OPENSHIFT_HOMEDIR'] + 'python\/virtualenv\/venv'$/;"	kind:variable	line:8
 virtualenv	../wsgi.py	/^virtualenv = os.path.join(virtenv, 'bin\/activate_this.py')$/;"	kind:variable	line:11
 wsgi.py	../api/api/wsgi.py	1;"	kind:file	line:1

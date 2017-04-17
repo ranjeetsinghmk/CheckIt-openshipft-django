@@ -65,23 +65,13 @@ export class UpdatesService {
 
     }
 
-    getUpdatesMenuItems() {
-        let data = JSON.parse(localStorage.getItem(this.MENUS_KEY));
-        let maxDesc = 0;
-        // data.forEach(item => {
-        //     console.log("max " + maxDesc + " " + item.desc.length);
-        //     if (item.desc.length > maxDesc) {
-        //         maxDesc = item.desc.length;
-        //     }
-        // });
-        // data.forEach(item => {
-        //     for (let i = item.desc.length; i < maxDesc; i++) {
-        //         item.desc += (Math.floor(Math.random() * 100000) % 2) ? " " : "2";
-        //     }
-        //     item.desc += "1";
-        //     console.log('after ' + item.desc.length);
-        // });
-        return data;
+    base = "http://127.0.0.1:8000";
+    getUpdatesMenuItems(): Observable<any> {
+        // let data = JSON.parse(localStorage.getItem(this.MENUS_KEY));
+        // let maxDesc = 0;
+        // return data;
+        return this.http.get(this.base + '/api/products/menus.json').map(
+            (response: Response) => response.json()["results"]);
     }
 
     getTopCreativeMessage(old: string) {

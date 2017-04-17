@@ -18,15 +18,21 @@ def upload_link(instance, filename):
     return '/'.join(['updates', 'link', filename])
 
 
+class Menu(models.Model):
+    title = models.CharField(max_length=50)
+    desc = models.TextField()
+    photo = models.ImageField(upload_to=scramble_uploaded_filename)
+
+    def __str__(self):
+        return self.title
+
+
 class Link(models.Model):
     title = models.CharField(max_length=50)
     target = models.CharField(max_length=200)
     icon = models.ImageField(upload_to=upload_link)
-    # links = models.ForeignKey(Menu, on_delete=models.CASCADE)
+    menu = models.ForeignKey(Menu, related_name="links",
+                             on_delete=models.CASCADE)
 
-
-class Menu(models.Model):
-    title = models.CharField(max_length=50)
-    desc = models.TextField()
-    links = models.ManyToManyField(Link)
-    photo = models.ImageField(upload_to=scramble_uploaded_filename)
+    def __str__(self):
+        return self.title

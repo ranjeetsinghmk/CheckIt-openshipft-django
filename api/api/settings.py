@@ -27,7 +27,9 @@ DEBUG = not os.environ.get('OPENSHIFT_HOMEDIR')
 
 ALLOWED_HOSTS = ['api-checkitsols.rhcloud.com']
 if DEBUG:
-    ALLOWED_HOSTS.append('127.0.0.1:8000')
+    ALLOWED_HOSTS.append('127.0.0.1')
+
+
 
 # Application definition
 
