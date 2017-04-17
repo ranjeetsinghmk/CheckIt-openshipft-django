@@ -184,7 +184,7 @@ ADMIN_LOGIN = 'ranjeet@checkit.com'
 ADMIN_PASSWORD = 'rjsdtr123'
 
 GET_USER_DETAILS_END_POINT = 'get_my_details'
-if DEBUG
+if DEBUG:
     CORS_ORIGIN_WHITELIST = (
         '127.0.0.1:4200',
         'localhost:4200'
