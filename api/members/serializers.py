@@ -1,5 +1,18 @@
 from rest_framework import serializers
-from members.models import Country, Project, Profile, Skill, SkillCategory
+from members.models import Country, Project, Profile, Skill, SkillCategory, Link, LinkBase
+
+
+class LinkSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Link
+        fields = ('id', 'url', 'base', 'profile',)
+
+
+class LinkBaseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LinkBase
+        fields = ('id', 'handler', 'logo',)
+
 
 
 class CountrySerializer(serializers.Serializer):
@@ -26,6 +39,8 @@ class SkillCategorySerializer(serializers.ModelSerializer):
 
 class ProfileSerializer(serializers.ModelSerializer):
 
+    links = LinkSerializer(many=True, read_only=True)
+
     class Meta:
         model = Profile
         fields = ('id', 'user', 'photo', 'firstName', 'lastName',
@@ -37,6 +52,7 @@ class SkillSerializer(serializers.ModelSerializer):
     class Meta:
         model = Skill
         fields = ('id', 'skill', 'skill_category', 'profiles',)
+
 
 
 class ProjectSerializer(serializers.ModelSerializer):

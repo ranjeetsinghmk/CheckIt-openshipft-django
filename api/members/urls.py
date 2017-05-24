@@ -16,9 +16,11 @@ from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 router.register(r'projects', views.ProjectViewSet)
+router.register(r'links', views.LinkViewSet)
+router.register(r'link_cats', views.LinkBaseViewSet)
 router.register(r'skills', views.SkillViewSet)
 router.register(r'countries', views.CountryViewSet)
-router.register(r'skill_categories', views.SkillCategoryViewSet)
+router.register(r'skill_cats', views.SkillCategoryViewSet)
 router.register(r'profiles', views.ProfileViewSet)
 
 urlpatterns = [
@@ -30,6 +32,6 @@ urlpatterns = [
     # url(r'^profiles/$', profile_list, name='profile-list'),
     # url(r'^profiles/(?P<pk>[0-9]+)/$', profile_detail, name='profile-detail'),
     url(r'', include(router.urls))
-] 
+]
 
 # urlpatterns = format_suffix_patterns(urlpatterns)

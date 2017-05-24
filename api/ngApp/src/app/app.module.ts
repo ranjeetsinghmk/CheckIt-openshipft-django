@@ -1,6 +1,7 @@
 import 'hammerjs';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
@@ -12,6 +13,7 @@ import { CheckItAutoComplete } from './_utils/components/autocomplete';
 import { NotFoundCompontent } from './_utils/components/app.notfound';
 import { RegisterComponent } from './accounts/register.component';
 import { ProductsComponent } from "./products/products.component";
+import { ProductDetailComponent } from "./products/details.component";
 import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
 import { UserService, AlertService } from './_services/index';
@@ -27,15 +29,17 @@ import { StringUtil } from './_utils/index';
     HomeComponent,
     RegisterComponent,
     NotFoundCompontent,
-    ProductsComponent
+    ProductsComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     FlexLayoutModule,
     ReactiveFormsModule,
     HttpModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     routing
   ],
   providers: [UserService, AlertService, StringUtil, UpdatesService],

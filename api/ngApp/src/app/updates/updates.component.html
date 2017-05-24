@@ -2,10 +2,10 @@
     [ngStyle]="{'margin-top':'20px'}" fxLayoutWrap>
     <div fxLayout="column" *ngFor="let item of menus" [ngStyle]="{'background':'url('+item.photo+')', 'background-size':'cover', 'background-color':'black'}"
         class="menuitem">
-        <span style="background-color: #f0f; padding: 5px;" [routerLink]="['/products']">
+        <span style="background-color: #f0f; padding: 5px;" (click)="showDetails(item.detail)">
                 <font color="white" font="14">{{item.title}}</font>
         </span>
-        <div class="menu-item-description" [routerLink]="['/products']" fxFlex>
+        <div class="menu-item-description" (click)="showDetails(item.detail)" fxFlex>
             {{item.desc}}
         </div>
         <ul class="menu-item-links" *ngIf="item.links">

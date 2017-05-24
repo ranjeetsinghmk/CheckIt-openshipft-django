@@ -11,16 +11,27 @@ def scramble_uploaded_filename(instance, filename):
     :return:
     """
     extension = filename.split(".")[-1]
-    return "{}/{}.{}".format('updates', 'main', filename, extension)
+    return "{}/{}/{}.{}".format('updates', 'main', filename, extension)
 
 
 def upload_link(instance, filename):
     return '/'.join(['updates', 'link', filename])
 
 
+class Detail(models.Model):
+    display_name = models.CharField(max_length=20)
+    desc = models.TextField()
+    photo = models.ImageField(
+        upload_to='products/detail/photos/%Y/%m/%d', default=None, blank=True, null=True)
+
+    def __str__(self):
+        return self.display_name
+
+
 class Menu(models.Model):
     title = models.CharField(max_length=50)
     desc = models.TextField()
+    detail = models.OneToOneField(Detail, default=None, blank=True, null=True)
     photo = models.ImageField(upload_to=scramble_uploaded_filename)
 
     def __str__(self):
@@ -32,7 +43,20 @@ class Link(models.Model):
     target = models.CharField(max_length=200)
     icon = models.ImageField(upload_to=upload_link)
     menu = models.ForeignKey(Menu, related_name="links",
-                             on_delete=models.CASCADE)
+                             on_delete=models.CASCADE, blank=True)
 
     def __str__(self):
         return self.title
+
+
+class Component(models.Model):
+    heading = models.CharField(max_length=60)
+    text = models.TextField()
+    actions = models.ManyToManyField(Link, blank=True, null=True)
+    detail = models.ForeignKey(
+        Detail, related_name="components", on_delete=models.CASCADE, blank=True)
+    photo = models.FileField(
+        upload_to='products/detail/compontents/%Y/%m/%d', default=None, blank=True, null=True)
+
+    def __str__(self):
+        return self.heading

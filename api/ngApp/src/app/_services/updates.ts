@@ -65,13 +65,19 @@ export class UpdatesService {
 
     }
 
-    base = ""  //environment.production ? "" : "http://127.0.0.1:8000";
+    base = environment.production ? "" : "http://127.0.0.1:8000";
     getUpdatesMenuItems(): Observable<any> {
         // let data = JSON.parse(localStorage.getItem(this.MENUS_KEY));
         // let maxDesc = 0;
         // return data;
         return this.http.get(this.base + '/api/products/menus.json').map(
             (response: Response) => response.json()["results"]);
+    }
+
+    getDetails(id: string) {
+        console.log('calling', this.base + '/api/products/details/' + id + '.json');
+        return this.http.get(this.base + '/api/products/details/' + id + '.json').map(
+            (response: Response) => response.json());
     }
 
     getTopCreativeMessage(old: string) {

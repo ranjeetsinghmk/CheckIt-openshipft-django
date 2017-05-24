@@ -5,8 +5,8 @@ from rest_framework import status
 from rest_framework import generics
 from rest_framework import viewsets
 from auth.permissions import IsAdminOrReadOnly, IsAuthenticated
-from members.models import Country, Project, Profile, Skill, SkillCategory
-from members.serializers import SkillCategorySerializer, CountrySerializer, ProfileSerializer, SkillSerializer, ProjectSerializer
+from members.models import Country, Project, Profile, Skill, SkillCategory, Link, LinkBase
+from members.serializers import SkillCategorySerializer, CountrySerializer, ProfileSerializer, SkillSerializer, ProjectSerializer, LinkSerializer, LinkBaseSerializer
 
 
 # class SkillCategoryList(generics.ListCreateAPIView):
@@ -112,3 +112,13 @@ class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
     permission_classes = (IsAdminOrReadOnly, IsAuthenticated)
+    
+class LinkViewSet(viewsets.ModelViewSet):
+    queryset = Link.objects.all()
+    serializer_class = LinkSerializer
+    permission_classes = (IsAdminOrReadOnly,)
+
+class LinkBaseViewSet(viewsets.ModelViewSet):
+    queryset = LinkBase.objects.all()
+    serializer_class = LinkBaseSerializer
+    permission_classes = (IsAdminOrReadOnly,)

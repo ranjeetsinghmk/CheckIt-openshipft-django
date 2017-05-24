@@ -5,6 +5,10 @@ from django.contrib.auth.models import User
 from api import settings
 
 
+
+
+
+
 class Country(models.Model):
     country = models.CharField(max_length=50, unique=True)
     tel_code = models.IntegerField()
@@ -16,18 +20,18 @@ class Country(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(
         User, on_delete=models.SET_NULL, related_name="person", null=True, blank=True)
-    photo = models.FileField(upload_to='profile/pic/%Y/%m/%d', default=None)
+    photo = models.FileField(upload_to='profile/pic/%Y/%m/%d', default=None, blank=True)
     firsttime = models.BooleanField(default=True)
     firstName = models.CharField('First Name', max_length=200)
     lastName = models.CharField('Last Name', max_length=200, null=True)
     nickname = models.CharField('Nick name', max_length=200)
-    aim = models.CharField('Your ambition', max_length=200)
+    aim = models.CharField('Tagline', max_length=200, null=True)
     contact = models.CharField(max_length=15, blank=True, null=True)
     country = models.ForeignKey(Country)
-    resume = models.FileField(upload_to='profile/cv/%Y/%m/%d', default=None)
+    resume = models.FileField(upload_to='profile/cv/%Y/%m/%d', default=None, blank=True, null=True)
     ranking = models.IntegerField(blank=True, null=True, default=0)
     followers = models.ManyToManyField(User, blank=True)
-    about = models.TextField()
+    about = models.TextField(blank=True)
     REQUIRED_FIELDS = ['name']
 
     def __str__(self):
@@ -75,3 +79,16 @@ class Project(models.Model):
 
     def __str__(self):
         return str(self.title)
+class LinkBase(models.Model):
+    handler = models.CharField(max_length=100)
+    logo = models.FileField(upload_to='profile/links/base/logo/%Y/%m/%d', default=None, blank=True)
+
+    def __str__(self):
+        return str(self.handler)
+
+class Link(models.Model):
+    url = models.CharField(max_length=200)
+    base = models.ForeignKey(LinkBase)
+    profile = models.ForeignKey(Profile, default=None)
+    def __str__(self):
+        return str(self.base) + ': ' + str(self.url) 
