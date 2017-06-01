@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+  <base href="/app">
+  <meta charset="utf-8">
+  <title>CheckIt</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    .loader {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 60px;
+      height: 60px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+    
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <script>
+    function getRandomColor() {
+      var result = "#";
+      for (var i = 0; i < 6; i++) {
+        var vl = Math.floor((Math.random() * 10000)) % 16;
+        if (vl < 10) {
+          result += vl;
+        } else if (vl == 10) {
+          result += 'a';
+        } else if (vl == 11) {
+          result += 'b';
+        } else if (vl == 12) {
+          result += 'c';
+        } else if (vl == 13) {
+          result += 'd';
+        } else if (vl == 14) {
+          result += 'e';
+        } else {
+          result += 'f';
+        }
+      }
+      return result;
+    }
+    var dv = document.getElementById('circle');
+    var dots = 0;
+    var intr = setInterval(function () {
+      if (!dv || null == dv) {
+        dv = document.getElementById('circle');
+      }
+      if (!dv || null == dv || null == dv.parentElement) {
+        clearInterval(intr);
+        return;
+      }
+      dv.style.color = getRandomColor();
+      var iHt = " Loaing";
+      for (var i = 0; i < dots; i++) {
+        iHt += ".";
+      }
+      dv.innerHTML = iHt;
+      dots++;
+      dots %= 5;
+      dv.parentElement.innerHTML = "";
+    }, 2000);
+  </script>
+</head>
+
+<body>
+  <app-root>
+    <div style="width: 100%;margin:0px auto; height: 600px;">
+      <div class='loader'></div>
+      <div id="circle"> Loading....</div>
+    </div>
+  </app-root>
+
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+
+</html>
