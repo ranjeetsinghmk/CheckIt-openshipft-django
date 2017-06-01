@@ -23,7 +23,8 @@ class ComponentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Component
-        fields = ('pk', 'heading', 'text', 'actions', 'photo')
+        fields = ('pk', 'heading', 'text', 'photo',
+                  'background', 'background1', 'aligntype', 'actions')
 
 
 class DetailSerializer(serializers.ModelSerializer):

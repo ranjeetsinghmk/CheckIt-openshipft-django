@@ -5,15 +5,12 @@ import { UpdatesService } from "../_services/updates";
 
 @Component({
     selector: 'product-details',
-    template: `
-    <img height="80" width="80" src="{{detail.photo}}" />
-    <p>{{detail.display_name}}</p>
-    `,
+    templateUrl: 'detail.component.html',
     styles: []
 })
 
 export class ProductDetailComponent implements OnInit {
-    detail = {
+detail = {
     };
     constructor(
         private route: ActivatedRoute,

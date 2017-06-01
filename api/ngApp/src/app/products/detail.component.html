@@ -1,0 +1,33 @@
+<div fxLayout="row" fxLayout.xs="column" style="padding:40px;background:#7f44b0;">
+    <div fxFlex="20" style="padding:2%;text-align: center;">
+        <img src="{{detail.photo}}" height="80" width="80" />
+        <span style="font-style: italic;font-size: 10px;color:white;">{{detail.display_name}}</span>
+    </div>
+    <div fxFlex>
+        <blockquote>
+            <p>{{detail.desc}}</p>
+            <span style="font-style: italic;float: right;">— {{detail.display_name}}</span>
+        </blockquote>
+    </div>
+</div>
+<div fxLayout="column" *ngIf="detail" style='font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;'>
+    <div fxLayout="row" fxLayout.xs="column" *ngFor="let component of detail.components" style="min-height: 400px;" [style.background]="component.background">
+        <div fxFlex style="padding: 20px;padding-left: 40px;">
+            <h2>{{component.heading}}</h2>
+            <p>{{component.text}}</p>
+            <ul style="list-style: none;" *ngIf="component.actions && component.actions.length > 0">
+                <li *ngFor="let action of component.actions" style="display: inline;">
+                    <a href="{{action.target}}" target="_blank" style="text-decoration:none; ">
+                        <img *ngIf="action.icon" src="{{action.icon}}" height="50px" width="50px" />
+                        <span *ngIf="!action.icon">
+                            {{action.title}}
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div *ngIf="component.photo" fxFlex="50" style="padding: 20px;padding-right: 40px;" [style.background]="component.background1">
+            <img src="{{component.photo}}" style="margin: 0px auto;" />
+        </div>
+    </div>
+</div>

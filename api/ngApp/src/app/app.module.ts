@@ -13,12 +13,13 @@ import { CheckItAutoComplete } from './_utils/components/autocomplete';
 import { NotFoundCompontent } from './_utils/components/app.notfound';
 import { RegisterComponent } from './accounts/register.component';
 import { ProductsComponent } from "./products/products.component";
-import { ProductDetailComponent } from "./products/details.component";
+import { ProductDetailComponent } from "./products/detail.component";
 import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
 import { UserService, AlertService } from './_services/index';
 import { UpdatesService } from "./_services/updates";
 import { StringUtil } from './_utils/index';
+import { PersonComponent } from "./personalities/component.person";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { StringUtil } from './_utils/index';
     RegisterComponent,
     NotFoundCompontent,
     ProductsComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,

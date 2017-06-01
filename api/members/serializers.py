@@ -5,14 +5,13 @@ from members.models import Country, Project, Profile, Skill, SkillCategory, Link
 class LinkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Link
-        fields = ('id', 'url', 'base', 'profile',)
+        fields = ('pk', 'url', 'base',)
 
 
 class LinkBaseSerializer(serializers.ModelSerializer):
     class Meta:
         model = LinkBase
-        fields = ('id', 'handler', 'logo',)
-
+        fields = ('pk', 'handler', 'logo',)
 
 
 class CountrySerializer(serializers.Serializer):
@@ -30,29 +29,19 @@ class CountrySerializer(serializers.Serializer):
         return instance
 
 
-class SkillCategorySerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = SkillCategory
-        fields = ('id', 'category', 'ranking',)
-
-
-class ProfileSerializer(serializers.ModelSerializer):
-
-    links = LinkSerializer(many=True, read_only=True)
-
-    class Meta:
-        model = Profile
-        fields = ('id', 'user', 'photo', 'firstName', 'lastName',
-                  'nickname', 'aim', 'contact', 'country', 'resume', 'about')
-
-
 class SkillSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Skill
-        fields = ('id', 'skill', 'skill_category', 'profiles',)
+        fields = ('pk', 'skill', 'skill_category',)
 
+
+class SkillCategorySerializer(serializers.ModelSerializer):
+    skills = SkillSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = SkillCategory
+        fields = ('pk', 'category', 'ranking', 'skills')
 
 
 class ProjectSerializer(serializers.ModelSerializer):
@@ -67,5 +56,17 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ('id', 'profile', 'title', 'start_date',
+        fields = ('pk', 'title', 'start_date',
                   'end_date', 'location', 'about', 'certificate')
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+
+    links = LinkSerializer(many=True, read_only=True)
+    skills = SkillSerializer(many=True, read_only=True)
+    projects = ProjectSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Profile
+        fields = ('pk', 'user', 'photo', 'firstName', 'lastName', 'links', 'skills', 'projects',
+                  'nickname', 'aim', 'contact', 'country', 'resume', 'about')

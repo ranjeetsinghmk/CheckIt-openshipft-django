@@ -41,9 +41,9 @@ class Menu(models.Model):
 class Link(models.Model):
     title = models.CharField(max_length=50)
     target = models.CharField(max_length=200)
-    icon = models.ImageField(upload_to=upload_link)
+    icon = models.ImageField(upload_to=upload_link, blank=True, null=True)
     menu = models.ForeignKey(Menu, related_name="links",
-                             on_delete=models.CASCADE, blank=True)
+                             on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return self.title
@@ -57,6 +57,10 @@ class Component(models.Model):
         Detail, related_name="components", on_delete=models.CASCADE, blank=True)
     photo = models.FileField(
         upload_to='products/detail/compontents/%Y/%m/%d', default=None, blank=True, null=True)
+    background = models.CharField(max_length=100, default="black")
+    background1 = models.CharField(max_length=100, default="black")
+    aligntype = models.CharField(max_length=5, default="LR", choices=(
+        ('LR', 'Left To Right'), ('C', 'Center'), ('RL', 'Right to Left')))
 
     def __str__(self):
         return self.heading
