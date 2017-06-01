@@ -7,7 +7,7 @@ import { User } from '../_models/index';
 
 @Injectable()
 export class UserService {
-    base = environment.production ? "" : "http://127.0.0.1:8000";
+    base = "";//environment.production ? "" : "http://127.0.0.1:8000";
     constructor(private http: Http) { }
 
     authenticate(user: User) {
