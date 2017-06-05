@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { User } from '../_models/user';
 import { OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
@@ -8,6 +8,7 @@ import { AlertService, UserService } from '../_services/index';
 })
 
 export class HomeComponent implements OnInit {
+    @ViewChild('myCanvas') el: ElementRef;
     authenticated: boolean;
     users: User[];
     next: string;
@@ -73,11 +74,22 @@ export class HomeComponent implements OnInit {
 
     ngOnInit(): void {
         this.authenticated = true;//this.userService.isAuthenticated();
-        this.fetchUsers();
+        // this.fetchUsers();
+        
     }
+    // tmp():{
+    //     var c = document.getElementById("myCanvas");
+    //     var ctx = c.getContext("2d");
+    //     ctx.beginPath();
+    //     ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+    //     ctx.stroke();
+    //     ctx.fillStyle = "blue";
+    //     ctx.fill();
+    // }
     constructor(
         private userService: UserService,
-        private alertService: AlertService) {
+        private alertService: AlertService,
+        private rd: Renderer2) {
         this.authenticated = false;
     }
 }

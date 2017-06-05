@@ -1,6 +1,6 @@
 webpackJsonp([1,3],{
 
-/***/ 189:
+/***/ 190:
 /***/ (function(module, exports) {
 
 /*
@@ -253,7 +253,7 @@ function updateLink(linkElement, obj) {
 
 /***/ }),
 
-/***/ 192:
+/***/ 193:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -262,7 +262,7 @@ function updateLink(linkElement, obj) {
 var content = __webpack_require__(376);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(189)(content, {});
+var update = __webpack_require__(190)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -280,7 +280,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 193:
+/***/ 194:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -289,7 +289,7 @@ if(false) {
 var content = __webpack_require__(377);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(189)(content, {});
+var update = __webpack_require__(190)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -330,7 +330,7 @@ exports = module.exports = __webpack_require__(58)(false);
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\nbody{\n    background: #fffeee;\n    margin: 0px auto;\n}\n\n.take-rest-space{\n    -webkit-box-flex: 1;\n        -ms-flex: 1 1 auto;\n            flex: 1 1 auto;\n}\n\nfooter{\n    min-height: 200px;\n    width: 100%;\n    margin: 0px auto;\n    background: #444;\n}\n\nfooter .footer-social-buttons ul{\n    list-style: none;\n}\nfooter .footer-social-buttons ul li{\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n}\nfooter .footer-social-buttons ul li a{\n    font-style: normal;\n}", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\nbody{\n    background: #fffeee;\n    margin: 0px auto;\n}\n\n.take-rest-space{\n    -webkit-box-flex: 1;\n        -ms-flex: 1 1 auto;\n            flex: 1 1 auto;\n}\n/*\nfooter{\n    min-height: 200px;\n    width: 100%;\n    margin: 0px auto;\n    background: #444;\n}\n\nfooter .footer-social-buttons ul{\n    list-style: none;\n}\nfooter .footer-social-buttons ul li{\n    display: inline-flex;\n}\nfooter .footer-social-buttons ul li a{\n    font-style: normal;\n}*/", ""]);
 
 // exports
 
@@ -340,8 +340,8 @@ exports.push([module.i, "/* You can add global styles to this file, and also imp
 /***/ 440:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(193);
-module.exports = __webpack_require__(192);
+__webpack_require__(194);
+module.exports = __webpack_require__(193);
 
 
 /***/ }),

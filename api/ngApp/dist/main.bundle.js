@@ -1,11 +1,12 @@
 webpackJsonp([0,3],{
 
-/***/ 125:
+/***/ 126:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(82);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -18,10 +19,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var UserService = (function () {
     function UserService(http) {
         this.http = http;
-        this.base = ""; //environment.production ? "" : "http://127.0.0.1:8000";
+        this.base = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].production ? "" : "http://127.0.0.1:8000";
     }
     UserService.prototype.authenticate = function (user) {
         return this.http.post(this.base + '/api-token-auth/', user).map(function (response) { return response.json(); });
@@ -74,7 +76,7 @@ var _a;
 
 /***/ }),
 
-/***/ 126:
+/***/ 127:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -102,25 +104,25 @@ NotFoundCompontent = __decorate([
 
 /***/ }),
 
-/***/ 127:
+/***/ 128:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__string_util__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__string_util__ = __webpack_require__(220);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__string_util__["a"]; });
 
 //# sourceMappingURL=/home/ranjeetsingh/dev/CheckIt/redhat/api/api/ngApp/src/index.js.map
 
 /***/ }),
 
-/***/ 128:
+/***/ 129:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_index__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_index__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_index__ = __webpack_require__(128);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -190,7 +192,7 @@ var _a, _b, _c, _d;
 
 /***/ }),
 
-/***/ 129:
+/***/ 130:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -246,12 +248,12 @@ var _a;
 
 /***/ }),
 
-/***/ 130:
+/***/ 131:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_user__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_user__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_index__ = __webpack_require__(81);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -267,9 +269,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var HomeComponent = (function () {
-    function HomeComponent(userService, alertService) {
+    // tmp():{
+    //     var c = document.getElementById("myCanvas");
+    //     var ctx = c.getContext("2d");
+    //     ctx.beginPath();
+    //     ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+    //     ctx.stroke();
+    //     ctx.fillStyle = "blue";
+    //     ctx.fill();
+    // }
+    function HomeComponent(userService, alertService, rd) {
         this.userService = userService;
         this.alertService = alertService;
+        this.rd = rd;
         this.authenticated = false;
     }
     HomeComponent.prototype.addUserWithDelay = function (users, i) {
@@ -324,23 +336,27 @@ var HomeComponent = (function () {
     };
     HomeComponent.prototype.ngOnInit = function () {
         this.authenticated = true; //this.userService.isAuthenticated();
-        this.fetchUsers();
+        // this.fetchUsers();
     };
     return HomeComponent;
 }());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewChild */])('myCanvas'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* ElementRef */]) === "function" && _a || Object)
+], HomeComponent.prototype, "el", void 0);
 HomeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* Component */])({
         template: __webpack_require__(384)
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_index__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_index__["a" /* UserService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_index__["b" /* AlertService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_index__["b" /* AlertService */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_index__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_index__["a" /* UserService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_index__["b" /* AlertService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_index__["b" /* AlertService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Renderer2 */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* Renderer2 */]) === "function" && _d || Object])
 ], HomeComponent);
 
-var _a, _b;
+var _a, _b, _c, _d;
 //# sourceMappingURL=/home/ranjeetsingh/dev/CheckIt/redhat/api/api/ngApp/src/home.component.js.map
 
 /***/ }),
 
-/***/ 131:
+/***/ 132:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -368,7 +384,7 @@ PersonComponent = __decorate([
 
 /***/ }),
 
-/***/ 132:
+/***/ 133:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -429,7 +445,7 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ 133:
+/***/ 134:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -464,7 +480,7 @@ ProductsComponent = __decorate([
 
 /***/ }),
 
-/***/ 190:
+/***/ 191:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -473,21 +489,21 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 190;
+webpackEmptyContext.id = 191;
 
 
 /***/ }),
 
-/***/ 191:
+/***/ 192:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(225);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app___ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app___ = __webpack_require__(223);
 
 
 
@@ -502,7 +518,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 215:
+/***/ 216:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -558,7 +574,7 @@ var Profile = (function () {
 
 /***/ }),
 
-/***/ 216:
+/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -624,7 +640,7 @@ var _a;
 
 /***/ }),
 
-/***/ 217:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -676,16 +692,16 @@ var _a;
 
 /***/ }),
 
-/***/ 218:
+/***/ 219:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_startWith__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_startWith__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_startWith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_startWith__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_updates__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__(126);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckItAutoComplete; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -739,7 +755,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 219:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -757,7 +773,7 @@ var StringUtil = (function () {
 
 /***/ }),
 
-/***/ 220:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -765,25 +781,25 @@ var StringUtil = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hammerjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hammerjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_material__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_flex_layout__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__node_modules_angular2_autosize_angular2_autosize__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__updates_updates_component__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_components_autocomplete__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_components_app_notfound__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__accounts_register_component__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__products_products_component__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__products_detail_component__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__home_home_component__ = __webpack_require__(130);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_routing__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_material__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_flex_layout__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__node_modules_angular2_autosize_angular2_autosize__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__updates_updates_component__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_components_autocomplete__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_components_app_notfound__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__accounts_register_component__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__products_products_component__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__products_detail_component__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__home_home_component__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__app_routing__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_index__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_updates__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__utils_index__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__personalities_component_person__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__utils_index__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__personalities_component_person__ = __webpack_require__(132);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -851,17 +867,17 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 221:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__accounts_register_component__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_component__ = __webpack_require__(130);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__products_products_component__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__products_detail_component__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_components_app_notfound__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__personalities_component_person__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__accounts_register_component__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home_component__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__products_products_component__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__products_detail_component__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_components_app_notfound__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__personalities_component_person__ = __webpack_require__(132);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routing; });
 
 
@@ -892,13 +908,13 @@ var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule 
 
 /***/ }),
 
-/***/ 222:
+/***/ 223:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_component__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_component__ = __webpack_require__(130);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(221);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__app_module__["a"]; });
 
 
@@ -906,13 +922,13 @@ var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule 
 
 /***/ }),
 
-/***/ 223:
+/***/ 224:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_switchMap__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_switchMap__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_switchMap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_updates__ = __webpack_require__(51);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UpdatesComponent; });
@@ -979,23 +995,6 @@ UpdatesComponent = __decorate([
 
 var _a, _b, _c;
 //# sourceMappingURL=/home/ranjeetsingh/dev/CheckIt/redhat/api/api/ngApp/src/updates.component.js.map
-
-/***/ }),
-
-/***/ 224:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
-// The file contents for the current environment will overwrite these during build.
-// The build system defaults to the dev environment which uses `environment.ts`, but if you do
-// `ng build --env=prod` then `environment.prod.ts` will be used instead.
-// The list of which env maps to which file can be found in `angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
-var environment = {
-    production: false
-};
-//# sourceMappingURL=/home/ranjeetsingh/dev/CheckIt/redhat/api/api/ngApp/src/environment.js.map
 
 /***/ }),
 
@@ -1110,14 +1109,14 @@ module.exports = "<div style=\"background-color: #263238;min-height:300px;paddin
 /***/ 383:
 /***/ (function(module, exports) {
 
-module.exports = "<md-toolbar [color]=\"primary\" class=\"mat-elevation-z3\" style.xs=\"min-height:150px;\">\n    <div fxLayout=\"row\" style=\"margin:0px;width:100%;text-align: center;\" fxLayoutAlign=\"start\" style.xs=\"width:300px\" fxLayoutGap.xs=\"0px\"\n        fxLayoutAlign.xs=\"stretch\" fxLayout.xs=\"column\">\n        <img src=\"{{icon}}\" [routerLink]=\"['/']\" style=\"cursor:pointer;\" height=\"70\" width=\"70\" />\n        <span fxFlex></span>\n        <div style=\"text-align: center;margin: 0px;\" fxFlex=\"50\" [innerHtml]=\"creativeBlock\"></div>\n        <!--<div style=\"min-width:300px;\">\n            <checkit-autocomplete style=\"margin: 0px auto;\"></checkit-autocomplete>\n        </div>-->\n    </div>\n    <!--<button md-button color=\"primary\" [routerLink]=\"['/register']\">JOIN</button>\n    <button md-raised-button color=\"accent\">GETIN</button>-->\n</md-toolbar>\n<!--<button md-fab>\n    <md-icon class=\"md-24\">add</md-icon>\n</button>\n<button md-mini-fab>\n    <md-icon class=\"md-24\">add</md-icon>\n</button>-->\n<router-outlet></router-outlet>\n<footer>\n    <a md-button color=\"primary\" href=\"/\">Home</a>\n    <button md-mini-fab (click)=\"window.open('http://profile-dtr.rhcloud.com')\">\n            <md-icon class=\"md-24\">web</md-icon>\n    </button>\n    <button md-mini-fab href=\"http://www.youtube.com/channel/UC3HXVelR0xZ8BePzP-Dqw_w\">\n            <md-icon class=\"md-24\">video_library</md-icon>\n    </button>\n    <button md-mini-fab href=\"https://www.facebook.com/Profileatdtr.rj\">\n            <md-icon class=\"md-24\">face</md-icon>\n    </button>\n</footer>"
+module.exports = "<md-toolbar [color]=\"primary\" class=\"mat-elevation-z3\" style.xs=\"min-height:150px;\">\n    <div fxLayout=\"row\" style=\"margin:0px;width:100%;text-align: center;\" fxLayoutAlign=\"start\" style.xs=\"width:300px\" fxLayoutGap.xs=\"0px\"\n        fxLayoutAlign.xs=\"stretch\" fxLayout.xs=\"column\">\n        <img src=\"{{icon}}\" [routerLink]=\"['/']\" style=\"cursor:pointer;\" height=\"70\" width=\"70\" />\n        <span fxFlex></span>\n        <div style=\"text-align: center;margin: 0px;\" fxFlex=\"50\" [innerHtml]=\"creativeBlock\"></div>\n        <!--<div style=\"min-width:300px;\">\n            <checkit-autocomplete style=\"margin: 0px auto;\"></checkit-autocomplete>\n        </div>-->\n    </div>\n    <!--<button md-button color=\"primary\" [routerLink]=\"['/register']\">JOIN</button>\n    <button md-raised-button color=\"accent\">GETIN</button>-->\n</md-toolbar>\n<!--<button md-fab>\n    <md-icon class=\"md-24\">add</md-icon>\n</button>\n<button md-mini-fab>\n    <md-icon class=\"md-24\">add</md-icon>\n</button>-->\n<router-outlet></router-outlet>\n<footer style=\"background: #444;height: 40px;padding: 5px;\">\n    <!--<button md-mini-fab (click)=\"window.open('http://profile-dtr.rhcloud.com')\">\n            <md-icon class=\"md-24\">web</md-icon>\n    </button>-->\n    <!--<button md-mini-fab href=\"\">\n            <md-icon class=\"md-24\">video_library</md-icon>\n    </button>\n    <button md-mini-fab href=\"https://www.facebook.com/Profileatdtr.rj\">\n            <md-icon class=\"md-24\">face</md-icon>\n    </button>-->\n    <style>\n        li {\n            display: inline-flex;\n        }\n\n        li:hover {\n            background: black;\n        }\n    </style>\n    <a md-raised-button color=\"primary\" href=\"/\">Home</a>\n    <ul style=\"list-style: none;height:50px;padding:0px;margin:0px auto;float: right;\">\n\n        <li>\n            <a href=\"http://www.youtube.com/channel/UC3HXVelR0xZ8BePzP-Dqw_w\">\n                <img src=\"static/images/youtube.png\" height=\"36\" width=\"36\" />\n            </a>\n        </li>\n        <li>\n            <a href=\"https://www.facebook.com/Profileatdtr.rj/\">\n                <img src=\"static/images/fb.png\" height=\"36\" width=\"36\" />\n            </a>\n        </li>\n        <li>\n            <a href=\"https://www.linkedin.com/in/rjsdtr/\">\n                <img src=\"static/images/linkedin.png\" height=\"36\" width=\"36\" />\n            </a>\n        </li>\n        <li>\n            <a href=\"https://www.codechef.com/users/rjsdtr\">\n                <img src=\"static/images/codechef.jpeg\" height=\"36\" width=\"36\" />\n            </a>\n        </li>\n    </ul>\n</footer>"
 
 /***/ }),
 
 /***/ 384:
 /***/ (function(module, exports) {
 
-module.exports = "<update-component></update-component>\n<div *ngIf=\"authenticated\">\n    <md-grid-list cols=\"3\">\n        <md-grid-tile *ngFor=\"let user of users\">\n            <md-card>\n                <img md-card-image src=\"{{user.photo}}\" height=\"200\" width=\"250\">\n                <md-card-title>{{user.name}}</md-card-title>\n                <md-card-content>\n                    <p>You can also contact me on <a href=\"mailto:{{user.email}}\">Email</a></p>\n                </md-card-content>\n                <md-card-actions align=\"end\">\n                    <button md-button>FOLLOW</button>\n                    <button md-raised-button>TALK</button>\n                </md-card-actions>\n            </md-card>\n        </md-grid-tile>\n    </md-grid-list>\n    <div fxLayout=\"column\" fxLayoutGap=\"10px\" fxLayoutAlign=\"start center\" *ngIf=\"users && (users.length < count || users.length == 0)\">\n        <button (click)=\"fetchNextUsers()\" fxFlex=\"25\" *ngIf=\"!fetchingUsers\" md-raised-button color=\"accent\">LOAD MORE?</button>\n        <style>\n            .loader {\n                border: 16px solid #f3f3f3;\n                border-radius: 50%;\n                border-top: 16px solid #3498db;\n                width: 40px;\n                height: 40px;\n                -webkit-animation: spin 2s linear infinite;\n                animation: spin 2s linear infinite;\n            }\n            \n            @-webkit-keyframes spin {\n                0% {\n                    -webkit-transform: rotate(0deg);\n                }\n                100% {\n                    -webkit-transform: rotate(360deg);\n                }\n            }\n            \n            @keyframes spin {\n                0% {\n                    transform: rotate(0deg);\n                }\n                100% {\n                    transform: rotate(360deg);\n                }\n            }\n        </style>\n        <div class='loader' *ngIf=\"fetchingUsers\"></div>\n        <font color='red' size='12' *ngIf=\"user_err\">\n            {{user_err}}\n        </font>\n    </div>\n</div>"
+module.exports = "<update-component></update-component>\n<div *ngIf=\"authenticated\">\n    <md-grid-list cols=\"3\">\n        <md-grid-tile *ngFor=\"let user of users\">\n            <md-card>\n                <img md-card-image src=\"{{user.photo}}\" height=\"200\" width=\"250\">\n                <md-card-title>{{user.name}}</md-card-title>\n                <md-card-content>\n                    <p>You can also contact me on <a href=\"mailto:{{user.email}}\">Email</a></p>\n                </md-card-content>\n                <md-card-actions align=\"end\">\n                    <button md-button>FOLLOW</button>\n                    <button md-raised-button>TALK</button>\n                </md-card-actions>\n            </md-card>\n        </md-grid-tile>\n    </md-grid-list>\n    <div fxLayout=\"column\" fxLayoutGap=\"10px\" fxLayoutAlign=\"start center\" *ngIf=\"users && (users.length < count || users.length == 0)\">\n        <button (click)=\"fetchNextUsers()\" fxFlex=\"25\" *ngIf=\"!fetchingUsers\" md-raised-button color=\"accent\">LOAD MORE?</button>\n        <style>\n            .loader {\n                border: 16px solid #f3f3f3;\n                border-radius: 50%;\n                border-top: 16px solid #3498db;\n                width: 40px;\n                height: 40px;\n                -webkit-animation: spin 2s linear infinite;\n                animation: spin 2s linear infinite;\n            }\n\n            @-webkit-keyframes spin {\n                0% {\n                    -webkit-transform: rotate(0deg);\n                }\n                100% {\n                    -webkit-transform: rotate(360deg);\n                }\n            }\n\n            @keyframes spin {\n                0% {\n                    transform: rotate(0deg);\n                }\n                100% {\n                    transform: rotate(360deg);\n                }\n            }\n        </style>\n        <div class='loader' *ngIf=\"fetchingUsers\"></div>\n        <font color='red' size='12' *ngIf=\"user_err\">\n            {{user_err}}\n        </font>\n    </div>\n</div>\n\n<div style=\"height: 500px;background:#ad3dfd;margin-top:10px;color:white;text-align: center;padding:40px;\">\n    <p>\n        We are creating something special for you\n    </p>\n    <canvas #myCanvas id=\"myCanvas\" width=\"100%\" height=\"100%\" >\n        Your browser does not support wait!!</canvas>\n\n</div>"
 
 /***/ }),
 
@@ -1152,7 +1151,7 @@ module.exports = "<div fxLayout=\"row\" class=\"menu\" fxLayoutAlign=\"center\" 
 /***/ 439:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(191);
+module.exports = __webpack_require__(192);
 
 
 /***/ }),
@@ -1165,6 +1164,7 @@ module.exports = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(82);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UpdatesService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1178,12 +1178,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var UpdatesService = (function () {
     function UpdatesService(http) {
         this.http = http;
         this.CREATIVE_TOP_MESSAGE_KEY = "creative_top_messages";
         this.MENUS_KEY = "menus";
-        this.base = ""; //environment.production ? "" : "http://127.0.0.1:8000";
+        this.base = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production ? "" : "http://127.0.0.1:8000";
         localStorage.setItem(this.CREATIVE_TOP_MESSAGE_KEY, "\n        [\n            \"<font size='2' color='blue' >Welcome to CheckIt</font>\",\n            \"<font size='2' color='blue' >We are together creative</font>\",\n            \"<font size='2' color='blue' >Explore explore explore and explore</font>\"\n        ]\n        ");
         localStorage.setItem(this.MENUS_KEY, "\n        [\n            {\n                \"id\": \"m1\",\n                \"title\": \"CheckIt\",\n                \"photo\": \"./static/updates/assets/img/icon-games.png\",\n                \"desc\": \"Beautiful game for all. concentrate on it.\",\n                \"links\": [\n                    {\n                        \"name\": \"Amazon Apps store\",\n                        \"icon\": \"https://cdn1.iconfinder.com/data/icons/app-stores-2/512/amazon_app_store_2.png\",\n                        \"target\": \"https://www.amazon.com/rjsdtr-CheckIt/dp/B01604BGAC/\"\n                    }\n                ]\n            },\n            {\n                \"id\": \"m2\",\n                \"title\": \"Business\",\n                \"photo\": \"http://www.planwallpaper.com/static/images/offset_WaterHouseMarineImages_62652-2-660x440.jpg\",\n                \"desc\": \"We provide platform for your business plan. Here you can design evething in no time with our creative UI.\"\n                \"links\":[\n                    {\n                        \"name\": \"\"\n                    }\n                ]\n            }, \n            {\n                \"id\": \"m3\",\n                \"title\": \"Explore\",\n                \"photo\":\"http://www.planwallpaper.com/static/images/9-credit-1.jpg\",\n                \"desc\": \"What is going on?? search for everything on a single platform. find the nice places in this World.\"\n            },\n            {\n                \"id\": \"m4\",\n                \"title\": \"Prove yourself\",\n                \"photo\": \"http://www.dam7.com/Images/Puppy/images/myspace-puppy-images-0005.jpg\",\n                \"desc\": \"Create a funtastic resume with a template of your choice FREE.\"\n            },\n            {\n                \"id\": \"m5\",\n                \"title\": \"Extra\",\n                \"photo\": \"http://i.dailymail.co.uk/i/pix/2016/11/02/15/39FD647300000578-0-image-a-15_1478101071773.jpg\",\n                \"desc\": \"Know what are we here for? write us and much more things.\"\n            }\n            ]\n        ");
     }
@@ -1225,16 +1226,33 @@ var _a;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__alert_service__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__alert_service__ = __webpack_require__(217);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__alert_service__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_service__ = __webpack_require__(218);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_service__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__user_service__ = __webpack_require__(126);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__user_service__["a"]; });
 
 
 
 //# sourceMappingURL=/home/ranjeetsingh/dev/CheckIt/redhat/api/api/ngApp/src/index.js.map
+
+/***/ }),
+
+/***/ 82:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
+var environment = {
+    production: false
+};
+//# sourceMappingURL=/home/ranjeetsingh/dev/CheckIt/redhat/api/api/ngApp/src/environment.js.map
 
 /***/ })
 

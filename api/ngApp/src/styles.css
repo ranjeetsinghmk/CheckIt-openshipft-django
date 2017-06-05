@@ -8,7 +8,7 @@ body{
 .take-rest-space{
     flex: 1 1 auto;
 }
-
+/*
 footer{
     min-height: 200px;
     width: 100%;
@@ -24,4 +24,4 @@ footer .footer-social-buttons ul li{
 }
 footer .footer-social-buttons ul li a{
     font-style: normal;
-}
+}*/
