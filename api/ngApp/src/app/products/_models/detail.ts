@@ -3,6 +3,6 @@ export class Detail {
     title: string;
     display_name:string;
     desc: string;
-    photo: string;
+    photo : string;
     icon: string;
 }
