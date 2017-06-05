@@ -187,5 +187,6 @@ GET_USER_DETAILS_END_POINT = 'get_my_details'
 if DEBUG:
     CORS_ORIGIN_WHITELIST = (
         '127.0.0.1:4200',
-        'localhost:4200'
+        'localhost:4200',
+        'api-checkitsols.rhcloud.com'
     )
