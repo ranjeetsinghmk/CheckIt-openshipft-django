@@ -10,8 +10,7 @@ import { UpdatesService } from "../_services/updates";
 })
 
 export class ProductDetailComponent implements OnInit {
-detail = {
-    };
+detail = new Detail();
     constructor(
         private route: ActivatedRoute,
         private router: Router,

@@ -2,6 +2,7 @@ export class Detail {
     id: number;
     title: string;
     display_name:string;
-    description: string;
+    desc: string;
+    photo: string;
     icon: string;
 }

@@ -12,6 +12,7 @@ export class AppComponent {
   title = 'app works!';
   icon = './static/images/icon.png';
   toolbar_color = '#ee0';
+  primary = '#ee0';
   creativeBlock = "<font size='2' color='blue' >Creative block</font>";
 
   private subscription: Subscription;
