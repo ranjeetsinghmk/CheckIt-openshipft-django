@@ -5,3 +5,4 @@ pygments
 django-filter
 django-cors-headers
 Pillow
+mod_wsgi
