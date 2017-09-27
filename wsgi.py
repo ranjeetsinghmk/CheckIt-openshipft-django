@@ -17,8 +17,3 @@ except:
 from django.core.wsgi import get_wsgi_application
 
 application = get_wsgi_application()
-try:
-    import pymysql
-    pymysql.install_as_MySQLdb()
-except ImportError:
-    pass
